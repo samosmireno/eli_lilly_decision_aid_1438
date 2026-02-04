@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
+import { Button } from "./components/ui/button";
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_REACT_APP_GA_MEASUREMENT_ID;
 
@@ -16,7 +17,11 @@ function App() {
       ReactGA.send({ hitType: "pageview", page: window.location.pathname });
     }
   }, []);
-  return <>Test</>;
+  return (
+    <>
+      <Button className="bg-amber-300">Test</Button>
+    </>
+  );
 }
 
 export default App;
