@@ -1,0 +1,46 @@
+export function EndocrineTherapyPros() {
+  return (
+    <article className="space-y-8">
+      <section aria-labelledby="introduction">
+        <p className="text-xl leading-relaxed text-gray-900">
+          For patients with hormone receptor-positive (HR+) early breast cancer
+          who have a lower risk of recurrence, the main goal of endocrine
+          therapy is to further reduce that small risk over the long term.
+        </p>
+      </section>
+
+      <section aria-labelledby="why-endocrine-therapy">
+        <h2
+          id="why-endocrine-therapy"
+          className="mb-4 text-2xl font-bold text-gray-900"
+        >
+          Why do you still need endocrine therapy?
+        </h2>
+        <p className="text-xl leading-relaxed text-gray-900">
+          Endocrine therapy acts like an insurance policy. It lowers the chance
+          of breast cancer coming back. Even after surgery or radiation, tiny
+          cancer cells may remain and can grow if exposed to estrogen. This
+          treatment blocks estrogen's effects, helping to keep you cancer-free
+          for longer.
+        </p>
+      </section>
+
+      <section aria-labelledby="why-not-cdk">
+        <h2 id="why-not-cdk" className="mb-4 text-2xl font-bold text-gray-900">
+          Why do I not need additional CDK4/6 inhibitors?
+        </h2>
+        <p className="text-xl leading-relaxed text-gray-900">
+          Because the risk of recurrence of your cancer is lower, endocrine
+          therapy alone works very well. Adding these medicines would not
+          provide extra benefit and could cause unnecessary side effects.
+        </p>
+      </section>
+
+      <footer className="pt-8">
+        <p className="text-sm text-gray-700">
+          Cucciniello L, et al. Cancer Treat Rev. 2023;120:102624.
+        </p>
+      </footer>
+    </article>
+  );
+}
