@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
 import { EndocrineTherapyPros } from "./pages/endocrine-therapy-pros";
+import { EndocrineTherapySideEffects } from "./pages/endocrine-therapy-side-effects";
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_REACT_APP_GA_MEASUREMENT_ID;
 
@@ -32,7 +33,14 @@ function App() {
       </a>
       <Routes>
         <Route path="/" element={<EndocrineTherapyPros />} />
-        <Route path="/endocrine-therapy" element={<EndocrineTherapyPros />} />
+        <Route
+          path="/endocrine-therapy-pros"
+          element={<EndocrineTherapyPros />}
+        />
+        <Route
+          path="/endocrine-therapy-effects"
+          element={<EndocrineTherapySideEffects />}
+        />
         <Route path="*" element={<EndocrineTherapyPros />} />
       </Routes>
     </>
