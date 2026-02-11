@@ -3,7 +3,7 @@ import { PageLayout } from "../components/page-layout";
 export function EndocrineTherapyPros() {
   return (
     <PageLayout title="Why Endocrine Therapy Alone is Right for You">
-      <article className="mt-19 mr-16 space-y-3">
+      <article className="mt-23 mr-16 space-y-3">
         <section>
           <p className="text-2xl leading-relaxed">
             For patients with hormone receptor-positive (HR+) early breast

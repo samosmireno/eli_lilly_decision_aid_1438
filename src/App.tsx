@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
 import { EndocrineTherapyPros } from "./pages/endocrine-therapy-pros";
 import { EndocrineTherapySideEffects } from "./pages/endocrine-therapy-side-effects";
+import { BrcaMutationStatus } from "./pages/brca-mutation-status";
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_REACT_APP_GA_MEASUREMENT_ID;
 
@@ -41,6 +42,7 @@ function App() {
           path="/endocrine-therapy-effects"
           element={<EndocrineTherapySideEffects />}
         />
+        <Route path="/brca-mutation-status" element={<BrcaMutationStatus />} />
         <Route path="*" element={<EndocrineTherapyPros />} />
       </Routes>
     </>

@@ -3,7 +3,7 @@ import { PageLayout } from "../components/page-layout";
 export function EndocrineTherapySideEffects() {
   return (
     <PageLayout title="Endocrine Therapy: Side Effects and Why Consistency Matters">
-      <article className="mt-4 mr-16 space-y-4">
+      <article className="mt-8 mr-16 space-y-4">
         <section aria-labelledby="side-effects">
           <h2 id="side-effects" className="mb-6 text-2xl font-bold">
             Endocrine therapy-related side effects
@@ -48,19 +48,31 @@ export function EndocrineTherapySideEffects() {
         <footer className="mt-4" role="doc-endnotes">
           <p className="text-sm text-gray-700">
             <span id="ref1">
-              <a href="#ref1-back" aria-label="Go back to reference 1">
+              <a
+                href="#ref1-back"
+                aria-label="Go back to reference 1"
+                className="cursor-default"
+              >
                 1.
               </a>{" "}
               Cucciniello L, et al. Cancer Treat Rev. 2023;120:102624.
             </span>{" "}
             <span id="ref2">
-              <a href="#ref2-back" aria-label="Go back to reference 2">
+              <a
+                href="#ref2-back"
+                aria-label="Go back to reference 2"
+                className="cursor-default"
+              >
                 2.
               </a>{" "}
               Eliassen FM, et al. BMC Cancer. 2023;23(1):625.
             </span>{" "}
             <span id="ref3">
-              <a href="#ref3-back" aria-label="Go back to reference 3">
+              <a
+                href="#ref3-back"
+                aria-label="Go back to reference 3"
+                className="cursor-default"
+              >
                 3.
               </a>{" "}
               Chang CY, et al. Br J Cancer. 2024;130(12):1943-1950.

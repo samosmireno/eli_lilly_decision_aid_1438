@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Header } from "./header";
 import { Layout } from "./layout";
-import { Sidebar } from "./sidebar";
+import { Sidebar } from "./sidebar/sidebar";
 
 interface PageLayoutProps {
   title: string;
