@@ -5,6 +5,12 @@ import { EndocrineTherapyPros } from "./pages/endocrine-therapy-pros";
 import { EndocrineTherapySideEffects } from "./pages/endocrine-therapy-side-effects";
 import { BrcaMutationStatus } from "./pages/brca-mutation-status";
 import { EndocrineTherapyBenefits } from "./pages/endocrine-therapy-benefits";
+import { BaselineRiskRecurrence } from "./pages/baseline-risk-recurrence";
+import { RiskAssessmentOutcome } from "./pages/risk-assessment-outcome";
+import { ElevatedRiskRecurrence } from "./pages/elevated-risk-recurrence";
+import { RoleCDK46Inhibitors } from "./pages/role-cdk46-inhibitors";
+import { CharacteristicsElevatedRisk } from "./pages/characteristics-elevated-risk";
+import { Study } from "./pages/study";
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_REACT_APP_GA_MEASUREMENT_ID;
 
@@ -48,6 +54,28 @@ function App() {
           path="/endocrine-therapy-benefits"
           element={<EndocrineTherapyBenefits />}
         />
+        <Route
+          path="/baseline-risk-recurrence"
+          element={<BaselineRiskRecurrence />}
+        />
+        <Route
+          path="/risk-assessment-outcome"
+          element={<RiskAssessmentOutcome />}
+        />
+        <Route
+          path="/elevated-risk-recurrence"
+          element={<ElevatedRiskRecurrence />}
+        />
+        <Route
+          path="/role-cdk46-inhibitors"
+          element={<RoleCDK46Inhibitors />}
+        />
+        <Route
+          path="/characteristics-elevated-risk"
+          element={<CharacteristicsElevatedRisk />}
+        />
+        <Route path="/monarche-study" element={<Study studyKey="monarche" />} />
+        <Route path="/natalee-study" element={<Study studyKey="natalee" />} />
         <Route path="*" element={<EndocrineTherapyPros />} />
       </Routes>
     </>
