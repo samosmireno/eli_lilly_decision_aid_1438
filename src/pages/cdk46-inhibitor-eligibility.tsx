@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { PageLayout } from "../components/page-layout";
 
 // Data array for different eligibility scenarios
@@ -44,7 +45,7 @@ export default function CDK46InhibitorEligibility({
   return (
     <PageLayout title="CDK4/6 inhibitor eligibility">
       <div className="mt-16 flex w-full items-center justify-center">
-        <div className="flex h-120 w-80 flex-col justify-center border-2 border-black bg-white px-3">
+        <div className="flex h-120 w-80 flex-col justify-center border border-black bg-white px-3">
           <div className="text-center">
             <p className="mb-6 text-2xl font-semibold">
               {scenario.characteristics}
@@ -52,9 +53,9 @@ export default function CDK46InhibitorEligibility({
 
             <p className="mb-28 text-2xl font-semibold">{scenario.fullText}</p>
 
-            <button className="text-xl italic hover:underline">
+            <Button className="bg-white text-xl text-gray-900 italic hover:cursor-pointer hover:bg-inherit hover:underline">
               click to learn more
-            </button>
+            </Button>
           </div>
         </div>
       </div>

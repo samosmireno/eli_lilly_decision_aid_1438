@@ -129,7 +129,7 @@ export function EndocrineTherapyBenefits() {
           Skip ahead to:{" "}
           <Link
             to="/endocrine-therapy-effects"
-            className="inline-block border-2 border-black px-3 py-3 text-xl font-semibold transition-colors hover:bg-gray-100"
+            className="inline-block border border-black px-3 py-3 text-xl font-semibold transition-colors hover:bg-gray-100"
           >
             Endocrine Therapy: Side Effects and Why Consistency Matters
           </Link>
