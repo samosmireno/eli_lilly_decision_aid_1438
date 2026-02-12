@@ -11,6 +11,8 @@ import { ElevatedRiskRecurrence } from "./pages/elevated-risk-recurrence";
 import { RoleCDK46Inhibitors } from "./pages/role-cdk46-inhibitors";
 import { CharacteristicsElevatedRisk } from "./pages/characteristics-elevated-risk";
 import { Study } from "./pages/study";
+import TreatmentDurations from "./pages/treatment-durations";
+import CDK46InhibitorEligibility from "./pages/cdk46-inhibitor-eligibility";
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_REACT_APP_GA_MEASUREMENT_ID;
 
@@ -76,6 +78,11 @@ function App() {
         />
         <Route path="/monarche-study" element={<Study studyKey="monarche" />} />
         <Route path="/natalee-study" element={<Study studyKey="natalee" />} />
+        <Route path="/treatment-durations" element={<TreatmentDurations />} />
+        <Route
+          path="/cdk46-inhibitor-eligibility"
+          element={<CDK46InhibitorEligibility />}
+        />
         <Route path="*" element={<EndocrineTherapyPros />} />
       </Routes>
     </>

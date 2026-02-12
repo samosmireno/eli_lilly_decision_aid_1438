@@ -1,0 +1,39 @@
+import { PageLayout } from "../components/page-layout";
+
+export default function TreatmentDurations() {
+  return (
+    <PageLayout title="Treatment Durations">
+      <div className="mt-1 flex flex-col gap-6">
+        <img
+          src="/placeholder-image.jpg"
+          alt="Treatment duration visualization"
+          className="h-120 w-full border border-gray-900"
+        />
+        <footer className="">
+          <p>
+            *Endocrine therapy is typically administered for at least 5 years
+            and may be extended to up to 10 years based on recurrence risk and
+            tolerability.
+          </p>
+          <p>
+            †CDK4/6 inhibitors are used in combination with endocrine therapy
+            for a defined duration in selected patients.
+          </p>
+          <p>
+            ‡Bone-modifying therapy may be considered for 2-3 years in
+            appropriate patients. Treatment decisions should be individualized.
+          </p>
+          <p>
+            1. NCCN Guidelines for Patients®: Ductal Carcinoma In Situ, Version
+            1. 2025 (Invasive Ductal Carcinoma version cited as per NCCN). 2.
+            Johnston S, et al. ESMO 2025; Abstract LBA13. 3. Johnston S, et al.
+            Ann Oncol. 2025 (in press). 4. Eli Lilly Canada Inc., VERZENIO
+            Product Monograph, 2025. 5. Crown J, et al., Ann Oncol. 2025; LBA14.
+            6. KISQALI Product Monograph, Novartis Pharmaceuticals Canada Inc.,
+            June 2025. 7. McGee S, et al. J Bone Oncol. 2021;27:100351.
+          </p>
+        </footer>
+      </div>
+    </PageLayout>
+  );
+}

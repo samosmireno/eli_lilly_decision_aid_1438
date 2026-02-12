@@ -11,5 +11,7 @@ export const pageOrder = [
   "/characteristics-elevated-risk",
   "/monarche-study",
   "/natalee-study",
+  "/treatment-durations",
+  "/cdk46-inhibitor-eligibility",
   // Add more pages in order as you build them
 ];
