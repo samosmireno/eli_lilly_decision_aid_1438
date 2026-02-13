@@ -30,8 +30,13 @@ export function BrcaMutationStatus() {
                 <li className="ml-6">
                   If a BRCA1 or BRCA2 mutation is present, your doctor may also
                   discuss other approved adjuvant treatment options, such as
-                  olaparib (as studied in the OlympiA trial*), depending on your
-                  individual risk.
+                  olaparib (as studied in the OlympiA trial
+                  <sup>
+                    <a id="ref1-back" href="#ref1">
+                      <span className="sr-only">Footnote </span>*
+                    </a>
+                  </sup>
+                  ), depending on your individual risk.
                 </li>
               </ul>
             </section>
@@ -59,25 +64,62 @@ export function BrcaMutationStatus() {
         </div>
 
         <footer className="mt-3">
-          <p className="text-sm text-gray-700">
-            *In a phase 3, randomized, double-blind trial (OlympiA), patients
-            with high-risk, HER2-negative early breast cancer and germline BRCA1
-            or BRCA2 pathogenic or likely pathogenic variants who had completed
-            local therapy and neoadjuvant or adjuvant chemotherapy were
-            randomized to receive 1 year of adjuvant olaparib or placebo. The
-            primary endpoint was invasive disease-free survival. At a
-            prespecified interim analysis (median follow-up, 2.5 years), 3-year
-            invasive disease-free survival was 85.9% with olaparib and 77.1%
-            with placebo (hazard ratio for invasive disease or death, 0.58;
-            P&lt;0.001). BRCA, breast cancer susceptibility gene; HER2, human
-            epidermal growth factor receptor 2; HR, hazard ratio; IDFS, invasive
-            disease-free survival; PARP, poly(adenosine diphosphate-ribose)
-            polymerase.
-          </p>
-          <p className="text-sm text-gray-700">
-            Tutt ANJ, et al., New England Journal of Medicine.
-            2021;384:2394-2405.
-          </p>
+          <section
+            role="doc-endnotes"
+            aria-labelledby="footnotes-heading"
+            className="text-sm text-gray-700"
+          >
+            <h2 id="footnotes-heading" className="sr-only">
+              Footnotes
+            </h2>
+            <p id="ref1" tabIndex={-1}>
+              <a href="#ref1-back">
+                <span className="sr-only">Back to footnote </span>*
+              </a>{" "}
+              In a phase 3, randomized, double-blind trial (OlympiA), patients
+              with high-risk, HER2-negative early breast cancer and germline
+              BRCA1 or BRCA2 pathogenic or likely pathogenic variants who had
+              completed local therapy and neoadjuvant or adjuvant chemotherapy
+              were randomized to receive 1 year of adjuvant olaparib or placebo.
+              The primary endpoint was invasive disease-free survival. At a
+              prespecified interim analysis (median follow-up, 2.5 years),
+              3-year invasive disease-free survival was 85.9% with olaparib and
+              77.1% with placebo (hazard ratio for invasive disease or death,
+              0.58; P&lt;0.001).
+            </p>
+          </section>
+
+          <section
+            role="doc-glossary"
+            aria-labelledby="abbreviations-heading"
+            className="text-sm text-gray-700"
+          >
+            <h2 id="abbreviations-heading" className="sr-only">
+              Abbreviations
+            </h2>
+            <p>
+              BRCA, breast cancer susceptibility gene; HER2, human epidermal
+              growth factor receptor 2; HR, hazard ratio; IDFS, invasive
+              disease-free survival; PARP, poly(adenosine diphosphate-ribose)
+              polymerase.
+            </p>
+          </section>
+
+          <section
+            role="doc-bibliography"
+            aria-labelledby="references-heading"
+            className="text-sm text-gray-700"
+          >
+            <h2 id="references-heading" className="sr-only">
+              References
+            </h2>
+            <ol>
+              <li tabIndex={-1}>
+                Tutt ANJ, et al., New England Journal of Medicine.
+                2021;384:2394-2405.
+              </li>
+            </ol>
+          </section>
         </footer>
       </article>
     </PageLayout>

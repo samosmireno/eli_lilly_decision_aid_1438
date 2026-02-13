@@ -18,11 +18,18 @@ export function EndocrineTherapyBenefits() {
         </h2>
 
         <Table className="overflow-hidden border-t-2 border-b-2 border-black">
+          <caption className="sr-only">
+            Endocrine Therapy Options and Clinical Trial Benefits
+          </caption>
           <TableHeader>
             <TableRow className="h-10 border-b-2 border-black">
               <TableHead className="w-56 text-xl font-semibold">
                 Endocrine Therapy
-                <sup className="text-base">1</sup>
+                <sup>
+                  <a href="#ref1" id="ref1-back">
+                    <span className="sr-only">Reference </span>1
+                  </a>
+                </sup>
               </TableHead>
               <TableHead className="px-4 text-xl font-semibold">
                 Key Trial Benefits (Evidence Summary)
@@ -36,7 +43,11 @@ export function EndocrineTherapyBenefits() {
                   <div className="font-semibold">1.</div>
                   <div className="font-semibold">
                     Tamoxifen
-                    <sup className="text-base">2</sup>
+                    <sup>
+                      <a href="#ref2" id="ref2-back">
+                        <span className="sr-only">Reference </span>2
+                      </a>
+                    </sup>
                   </div>
                 </div>
               </TableCell>
@@ -66,7 +77,11 @@ export function EndocrineTherapyBenefits() {
                     Aromatase
                     <br />
                     Inhibitors (AIs)
-                    <sup className="text-base">3</sup>
+                    <sup>
+                      <a href="#ref3" id="ref3-back">
+                        <span className="sr-only">Reference </span>3
+                      </a>
+                    </sup>
                   </div>
                 </div>
               </TableCell>
@@ -96,7 +111,11 @@ export function EndocrineTherapyBenefits() {
                     Ovarian Function
                     <br />
                     Suppression (OFS)
-                    <sup className="text-base">4</sup>
+                    <sup>
+                      <a href="#ref4" id="ref4-back">
+                        <span className="sr-only">Reference </span>4
+                      </a>
+                    </sup>
                   </div>
                   <div className="mt-1 text-base italic">
                     (typically combined
@@ -135,15 +154,43 @@ export function EndocrineTherapyBenefits() {
           </Link>
         </div>
 
-        <footer className="">
-          <p className="text-sm text-gray-700">
-            1. NCCN Guidelines for Patients®: Ductal Carcinoma In Situ. Version
-            1. 2025. National Comprehensive Cancer Network (NCCN). 2. Early
-            Breast Cancer Trialists' Collaborative Group (EBCTCG). Lancet.
-            2005;365:1687-1717.3. . Early Breast Cancer Trialists' Collaborative
-            Group (EBCTCG). Lancet. 2005;365:1687-1717. 4. Pagani O, et al. J
-            Clin Oncol. 2023;41:1376-1382.
-          </p>
+        <footer
+          className=""
+          role="doc-bibliography"
+          aria-labelledby="references-heading"
+        >
+          <h2 id="references-heading" className="sr-only">
+            References
+          </h2>
+          <ol className="text-sm text-gray-700">
+            <li id="ref1" tabIndex={-1} className="inline">
+              <a href="#ref1-back">
+                <span className="sr-only">Back to reference </span>1.
+              </a>{" "}
+              NCCN Guidelines for Patients®: Ductal Carcinoma In Situ. Version
+              1. 2025. National Comprehensive Cancer Network (NCCN).
+            </li>{" "}
+            <li id="ref2" tabIndex={-1} className="inline">
+              <a href="#ref2-back">
+                <span className="sr-only">Back to reference </span>2.
+              </a>{" "}
+              Early Breast Cancer Trialists' Collaborative Group (EBCTCG).
+              Lancet. 2005;365:1687-1717.
+            </li>{" "}
+            <li id="ref3" tabIndex={-1} className="inline">
+              <a href="#ref3-back">
+                <span className="sr-only">Back to reference </span>3.
+              </a>{" "}
+              Early Breast Cancer Trialists' Collaborative Group (EBCTCG).
+              Lancet. 2005;365:1687-1717.
+            </li>{" "}
+            <li id="ref4" tabIndex={-1} className="inline">
+              <a href="#ref4-back">
+                <span className="sr-only">Back to reference </span>4.
+              </a>{" "}
+              Pagani O, et al. J Clin Oncol. 2023;41:1376-1382.
+            </li>
+          </ol>
         </footer>
       </article>
     </PageLayout>

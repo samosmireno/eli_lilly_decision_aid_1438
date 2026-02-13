@@ -7,9 +7,9 @@ export function EndocrineTherapySideEffects() {
         <section aria-labelledby="side-effects">
           <h2 id="side-effects" className="mb-6 text-2xl font-bold">
             Endocrine therapy-related side effects
-            <sup id="ref1-back">
-              <a href="#ref1" aria-label="Reference 1">
-                1
+            <sup>
+              <a id="ref1-back" href="#ref1">
+                <span className="sr-only">Reference </span>1
               </a>
             </sup>
           </h2>
@@ -29,55 +29,50 @@ export function EndocrineTherapySideEffects() {
             the recommended duration. Studies show that staying on treatment as
             prescribed is associated with a lower risk of breast cancer
             recurrence over the long term.
-            <sup id="ref2-back">
-              <a href="#ref2" aria-label="Reference 2">
-                2
+            <sup>
+              <a href="#ref2" id="ref2-back">
+                <span className="sr-only">Reference </span>2
               </a>
+              ,
             </sup>
             <sup>
-              ,
-              <a href="#ref3" aria-label="Reference 3" id="ref3-back">
-                3
+              <a href="#ref3" id="ref3-back">
+                <span className="sr-only">Reference </span>3
               </a>
-            </sup>{" "}
+            </sup>
             Managing side effects early and discussing challenges with your care
             team can help you stay on therapy and get the full benefit.
           </p>
         </section>
 
-        <footer className="mt-4" role="doc-endnotes">
-          <p className="text-sm text-gray-700">
-            <span id="ref1">
-              <a
-                href="#ref1-back"
-                aria-label="Go back to reference 1"
-                className="cursor-default"
-              >
-                1.
+        <footer
+          className="mt-4"
+          role="doc-bibliography"
+          aria-labelledby="references-heading"
+        >
+          <h2 id="references-heading" className="sr-only">
+            References
+          </h2>
+          <ol className="flex flex-wrap gap-2 text-sm text-gray-700">
+            <li id="ref1" tabIndex={-1}>
+              <a href="#ref1-back">
+                <span className="sr-only">Back to reference </span>1.
               </a>{" "}
               Cucciniello L, et al. Cancer Treat Rev. 2023;120:102624.
-            </span>{" "}
-            <span id="ref2">
-              <a
-                href="#ref2-back"
-                aria-label="Go back to reference 2"
-                className="cursor-default"
-              >
-                2.
+            </li>{" "}
+            <li id="ref2" tabIndex={-1}>
+              <a href="#ref2-back">
+                <span className="sr-only">Back to reference </span>2.
               </a>{" "}
               Eliassen FM, et al. BMC Cancer. 2023;23(1):625.
-            </span>{" "}
-            <span id="ref3">
-              <a
-                href="#ref3-back"
-                aria-label="Go back to reference 3"
-                className="cursor-default"
-              >
-                3.
+            </li>{" "}
+            <li id="ref3" tabIndex={-1}>
+              <a href="#ref3-back">
+                <span className="sr-only">Back to reference </span>3.
               </a>{" "}
               Chang CY, et al. Br J Cancer. 2024;130(12):1943-1950.
-            </span>
-          </p>
+            </li>
+          </ol>
         </footer>
       </article>
     </PageLayout>

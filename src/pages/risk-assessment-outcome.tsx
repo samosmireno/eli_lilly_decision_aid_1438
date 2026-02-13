@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { PageLayout } from "../components/page-layout";
 
 const outcomes = [
@@ -29,12 +30,14 @@ export function RiskAssessmentOutcome() {
             <h2 className="mb-3 text-center text-3xl font-bold">
               {outcome.title}
             </h2>
-            <div className="flex h-full w-full flex-col items-center justify-center border border-black p-8">
+            <div className="flex w-full flex-col items-center justify-center border border-black p-8">
               <p className="text-center text-2xl">
                 <strong>{outcome.description}</strong>
               </p>
-              <p className="mb-5 text-center">{outcome.note}</p>
-              <p className="text-center text-2xl italic">{outcome.action}</p>
+              <p className="mb-16 text-center text-xl">{outcome.note}</p>
+              <Button className="mb-8 bg-transparent text-center text-2xl whitespace-normal text-gray-900 italic hover:cursor-pointer hover:bg-inherit hover:underline">
+                {outcome.action}
+              </Button>
             </div>
           </div>
         </div>

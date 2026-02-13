@@ -21,7 +21,15 @@ export function ElevatedRiskRecurrence() {
           <li className="ml-6">
             Even after surgery, chemotherapy, or hormone therapy, some cancers
             have features that make them more likely to come back.
-            <sup>1-3</sup>
+            <sup>
+              <a href="#ref1" id="ref1-back">
+                <span className="sr-only">Reference </span>1
+              </a>
+              –
+              <a href="#ref3" id="ref3-back">
+                <span className="sr-only">Reference </span>3
+              </a>
+            </sup>
           </li>
 
           <li className="ml-6">
@@ -29,7 +37,11 @@ export function ElevatedRiskRecurrence() {
               Even after completing 5 to 10 years of hormone therapy, the risk
               of breast cancer returning does not completely go away.
             </strong>
-            <sup>2</sup>
+            <sup>
+              <a href="#ref2" id="ref2-back">
+                <span className="sr-only">Reference </span>2
+              </a>
+            </sup>
           </li>
 
           <li className="ml-6">
@@ -37,27 +49,74 @@ export function ElevatedRiskRecurrence() {
             that{" "}
             <strong>some recurrences can happen up to 20 years later,</strong>{" "}
             especially in people whose cancer had spread to nearby lymph nodes
-            when first diagnosed.<sup>1-2</sup>
+            when first diagnosed.
+            <sup>
+              <a href="#ref1">
+                <span className="sr-only">Reference </span>1
+              </a>
+              –
+              <a href="#ref2">
+                <span className="sr-only">Reference </span>2
+              </a>
+            </sup>
           </li>
 
           <li className="ml-6">
             When breast cancer recurs, it most often returns outside the breast,
             as distant (metastatic) disease (for example, in bone, liver, or
-            lung), rather than only in the breast.<sup>1-2</sup>
+            lung), rather than only in the breast.
+            <sup>
+              <a href="#ref1">
+                <span className="sr-only">Reference </span>1
+              </a>
+              –
+              <a href="#ref2">
+                <span className="sr-only">Reference </span>2
+              </a>
+            </sup>
           </li>
 
           <li className="ml-6">
             Distant recurrence is different from cancer returning in the breast
             and usually requires ongoing systemic treatment rather than surgery
-            alone.<sup>3</sup>
+            alone.
+            <sup>
+              <a href="#ref3">
+                <span className="sr-only">Reference </span>3
+              </a>
+            </sup>
           </li>
         </ul>
 
-        <footer className="pt-12 text-sm text-gray-700">
-          1. Pan H, et al. N Engl J Med. 2017;377(19):1836-1846. 2. Early Breast
-          Cancer Trialists' Collaborative Group (EBCTCG), et al., Lancet.
-          2011;378(9793):771-784. 3. Burstein HJ, et al. J Clin Oncol.
-          2019;37(5):423-438.
+        <footer
+          className="pt-12"
+          role="doc-bibliography"
+          aria-labelledby="references-heading"
+        >
+          <h2 id="references-heading" className="sr-only">
+            References
+          </h2>
+          <ol className="text-sm text-gray-700">
+            <li id="ref1" tabIndex={-1} className="inline">
+              <a href="#ref1-back">
+                <span className="sr-only">Back to reference </span>1.
+              </a>{" "}
+              Pan H, et al. N Engl J Med. 2017;377(19):1836-1846.
+            </li>{" "}
+            <li id="ref2" tabIndex={-1} className="inline">
+              <a href="#ref2-back">
+                <span className="sr-only">Back to reference </span>2.
+              </a>{" "}
+              Early Breast Cancer Trialists' Collaborative Group (EBCTCG), et
+              al., Lancet. 2011;378(9793):771-784.
+            </li>{" "}
+            <li id="ref3" tabIndex={-1} className="inline">
+              <a href="#ref3-back">
+                <span className="sr-only">Back to reference </span>3.
+              </a>{" "}
+              Burstein HJ, et al. J Clin Oncol. 2019;37(5):423-438.
+            </li>
+          </ol>
         </footer>
       </article>
     </PageLayout>
