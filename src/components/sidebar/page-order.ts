@@ -17,5 +17,9 @@ export const pageOrder = [
   "/ribociclib-eligibility",
   "/abemaciclib-precautions",
   "/ribociclib-precautions",
+  "/monarche-study-results",
+  "/monarche-study-results/part-2",
+  "/natalee-study-results",
+  "/natalee-study-results/part-2",
   // Add more pages in order as you build them
 ];
