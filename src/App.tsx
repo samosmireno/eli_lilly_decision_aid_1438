@@ -13,6 +13,8 @@ import { CharacteristicsElevatedRisk } from "./pages/characteristics-elevated-ri
 import { Study } from "./pages/study";
 import TreatmentDurations from "./pages/treatment-durations";
 import CDK46InhibitorEligibility from "./pages/cdk46-inhibitor-eligibility";
+import { MedicationEligibility } from "./pages/medication-eligibility";
+import { MedicationPrecautions } from "./pages/medication-precautions";
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_REACT_APP_GA_MEASUREMENT_ID;
 
@@ -82,6 +84,22 @@ function App() {
         <Route
           path="/cdk46-inhibitor-eligibility"
           element={<CDK46InhibitorEligibility />}
+        />
+        <Route
+          path="/abemaciclib-eligibility"
+          element={<MedicationEligibility medicationKey="abemaciclib" />}
+        />
+        <Route
+          path="/ribociclib-eligibility"
+          element={<MedicationEligibility medicationKey="ribociclib" />}
+        />
+        <Route
+          path="/abemaciclib-precautions"
+          element={<MedicationPrecautions medicationKey="abemaciclib" />}
+        />
+        <Route
+          path="/ribociclib-precautions"
+          element={<MedicationPrecautions medicationKey="ribociclib" />}
         />
         <Route path="*" element={<EndocrineTherapyPros />} />
       </Routes>

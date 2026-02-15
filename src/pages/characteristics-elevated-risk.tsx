@@ -11,7 +11,7 @@ import { PageLayout } from "../components/page-layout";
 export function CharacteristicsElevatedRisk() {
   return (
     <PageLayout title="Characteristics of Patients who have Elevated Risk of Recurrence">
-      <article className="mr-16 space-y-8">
+      <article className="mt-4 mr-16 space-y-8">
         <section className="space-y-6">
           <h2 className="text-2xl font-bold">
             How was higher risk defined in these studies?

@@ -24,7 +24,7 @@ export function RiskAssessmentOutcome() {
   const outcome = outcomes[0];
   return (
     <PageLayout title="Risk Assessment Outcome">
-      <article className="mr-16 flex items-center justify-center pt-20">
+      <article className="mr-16 flex items-center justify-center pt-24">
         <div className="max-w-2xl">
           <div className="flex flex-col items-center p-8">
             <h2 className="mb-3 text-center text-3xl font-bold">

@@ -13,5 +13,9 @@ export const pageOrder = [
   "/natalee-study",
   "/treatment-durations",
   "/cdk46-inhibitor-eligibility",
+  "/abemaciclib-eligibility",
+  "/ribociclib-eligibility",
+  "/abemaciclib-precautions",
+  "/ribociclib-precautions",
   // Add more pages in order as you build them
 ];

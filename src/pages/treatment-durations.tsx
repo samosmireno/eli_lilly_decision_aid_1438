@@ -3,7 +3,7 @@ import { PageLayout } from "../components/page-layout";
 export default function TreatmentDurations() {
   return (
     <PageLayout title="Treatment Durations">
-      <div className="mt-1 flex flex-col gap-6">
+      <div className="mt-5 flex flex-col gap-6">
         <img
           src="/placeholder-image.jpg"
           alt="Treatment duration visualization"

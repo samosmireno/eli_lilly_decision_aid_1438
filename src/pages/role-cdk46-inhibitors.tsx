@@ -3,7 +3,7 @@ import { PageLayout } from "../components/page-layout";
 export function RoleCDK46Inhibitors() {
   return (
     <PageLayout title="Role of CDK4/6 inhibitors in HR+ Early Breast Cancer">
-      <article className="mr-16 space-y-8">
+      <article className="mt-4 mr-16 space-y-8">
         <ul className="list-disc text-2xl">
           <li className="ml-6">
             Cancer cells grow by dividing controlled by proteins called CDK4 and

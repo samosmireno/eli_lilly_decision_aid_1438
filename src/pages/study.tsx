@@ -62,7 +62,7 @@ export function Study({ studyKey }: StudyProps) {
   const study = studies[studyKey];
   return (
     <PageLayout title="Adding a CDK4/6 Inhibitor Further Reduced the Risk of Cancer Returning">
-      <article className="mt-3 mr-16 space-y-8">
+      <article className="mt-8 mr-16 space-y-8">
         <h2 className="text-2xl">
           <span className="font-semibold">{study.title} </span>
           <span className="italic">

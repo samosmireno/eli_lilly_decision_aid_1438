@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 export function EndocrineTherapyBenefits() {
   return (
     <PageLayout title="Clinical Benefits of Endocrine Therapy">
-      <article className="mr-16 space-y-4">
+      <article className="mt-4 mr-16 space-y-4">
         <h2 className="mb-8 text-2xl font-semibold">
           Ask your doctor about what these findings mean to you.
         </h2>

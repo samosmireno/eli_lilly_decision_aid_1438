@@ -44,7 +44,7 @@ export default function CDK46InhibitorEligibility({
 
   return (
     <PageLayout title="CDK4/6 inhibitor eligibility">
-      <div className="mt-16 flex w-full items-center justify-center">
+      <div className="mt-20 flex w-full items-center justify-center">
         <div className="flex h-120 w-80 flex-col justify-center border border-black bg-white px-3">
           <div className="text-center">
             <p className="mb-6 text-2xl font-semibold">

@@ -3,7 +3,7 @@ import { PageLayout } from "../components/page-layout";
 export function EndocrineTherapySideEffects() {
   return (
     <PageLayout title="Endocrine Therapy: Side Effects and Why Consistency Matters">
-      <article className="mt-8 mr-16 space-y-4">
+      <article className="mt-12 mr-16 space-y-4">
         <section aria-labelledby="side-effects">
           <h2 id="side-effects" className="mb-6 text-2xl font-bold">
             Endocrine therapy-related side effects
