@@ -21,5 +21,7 @@ export const pageOrder = [
   "/monarche-study-results/part-2",
   "/natalee-study-results",
   "/natalee-study-results/part-2",
+  "/abemaciclib-side-effects",
+  "/ribociclib-side-effects",
   // Add more pages in order as you build them
 ];

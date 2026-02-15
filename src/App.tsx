@@ -15,6 +15,7 @@ import TreatmentDurations from "./pages/treatment-durations";
 import CDK46InhibitorEligibility from "./pages/cdk46-inhibitor-eligibility";
 import { MedicationEligibility } from "./pages/medication-eligibility";
 import { MedicationPrecautions } from "./pages/medication-precautions";
+import { MedicationSideEffects } from "./pages/medication-side-effects";
 import { StudyResults } from "./pages/study-results";
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_REACT_APP_GA_MEASUREMENT_ID;
@@ -117,6 +118,14 @@ function App() {
         <Route
           path="/natalee-study-results/part-2"
           element={<StudyResults medicationKey="ribociclib" part={2} />}
+        />
+        <Route
+          path="/abemaciclib-side-effects"
+          element={<MedicationSideEffects medicationKey="abemaciclib" />}
+        />
+        <Route
+          path="/ribociclib-side-effects"
+          element={<MedicationSideEffects medicationKey="ribociclib" />}
         />
         <Route path="*" element={<EndocrineTherapyPros />} />
       </Routes>
