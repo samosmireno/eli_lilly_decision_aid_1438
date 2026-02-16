@@ -23,5 +23,9 @@ export const pageOrder = [
   "/natalee-study-results/part-2",
   "/abemaciclib-side-effects",
   "/ribociclib-side-effects",
+  "/abemaciclib-quality-of-life",
+  "/ribociclib-quality-of-life",
+  "/abemaciclib-care-journey",
+  "/ribociclib-care-journey",
   // Add more pages in order as you build them
 ];
