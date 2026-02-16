@@ -18,8 +18,13 @@ const medEligibility = {
       "Pregnancy: There is not enough information to know if abemaciclib is safe during pregnancy. Birth control is recommended during treatment and for 3 weeks after your last dose.",
       "Breastfeeding: It is not known if abemaciclib passes into breast milk, so breastfeeding is not recommended during treatment and for 3 weeks after the last dose.",
     ],
-    footer:
-      "Abemaciclib is indicated in combination with endocrine therapy for the adjuvant treatment of adult patients with hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative, node-positive, early breast cancer at high risk of disease recurrence based on clinicopathological features. Eli Lilly Canada Inc. VERZENIO (abemaciclib) Product Monograph – Including Patient Medication Information. Toronto (ON): Eli Lilly Canada Inc.; 2025 Jul 24. Submission Control No. 293494.",
+    footer: {
+      details:
+        "Abemaciclib is indicated in combination with endocrine therapy for the adjuvant treatment of adult patients with hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative, node-positive, early breast cancer at high risk of disease recurrence based on clinicopathological features.",
+      references: [
+        "Eli Lilly Canada Inc. VERZENIO (abemaciclib) Product Monograph – Including Patient Medication Information. Toronto (ON): Eli Lilly Canada Inc.; 2025 Jul 24. Submission Control No. 293494.",
+      ],
+    },
   },
   ribociclib: {
     medication: "ribociclib (Kisqali)",
@@ -39,8 +44,14 @@ const medEligibility = {
       "Pregnancy: There isn’t enough information to know if ribociclib is safe during pregnancy. Birth control is recommended during treatment and for at least 3 weeks after your last dose.",
       "Breastfeeding: It isn’t known if ribociclib passes into breast milk. Breastfeeding is not recommended during treatment and for at least 3 weeks after the last dose.",
     ],
-    footer:
-      "In combination with an aromatase inhibitor for the adjuvant treatment of adult patients with hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative stage II-III early breast cancer at high risk of recurrence. In pre- or perimenopausal women, or men, the aromatase inhibitor should be combined with a luteinizing hormone-releasing hormone (LHRH) agonist. 1. Novartis Pharmaceuticals Canada Inc. KISQALI (ribociclib) Product Monograph – Including Patient Medication Information. Montreal (QC): Novartis Pharmaceuticals Canada Inc.; 2025 Jun 12. Submission Control No. 283993. 2. Slamon DJ et al. N Engl J Med. 2024;390(10):1080–1092.",
+    footer: {
+      details:
+        "In combination with an aromatase inhibitor for the adjuvant treatment of adult patients with hormone receptor (HR)-positive, human epidermal growth factor receptor 2 (HER2)-negative stage II-III early breast cancer at high risk of recurrence. In pre- or perimenopausal women, or men, the aromatase inhibitor should be combined with a luteinizing hormone-releasing hormone (LHRH) agonist. ",
+      references: [
+        "1. Novartis Pharmaceuticals Canada Inc. KISQALI (ribociclib) Product Monograph – Including Patient Medication Information. Montreal (QC): Novartis Pharmaceuticals Canada Inc.; 2025 Jun 12. Submission Control No. 283993. 2. Slamon DJ et al. N Engl J Med. 2024;390(10):1080–1092.",
+        "2. Slamon DJ et al. N Engl J Med. 2024;390(10):1080–1092.",
+      ],
+    },
   },
 };
 
@@ -160,7 +171,16 @@ export function MedicationEligibility({
         </main>
 
         <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
-          <p>{medEligibility[medicationKey].footer}</p>
+          <p>{medEligibility[medicationKey].footer.details}</p>
+          <ol>
+            {medEligibility[medicationKey].footer.references.map(
+              (ref, index) => (
+                <li key={index} className="inline">
+                  {ref}
+                </li>
+              ),
+            )}
+          </ol>
         </footer>
       </div>
     </PageLayout>

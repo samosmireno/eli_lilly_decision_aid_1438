@@ -20,10 +20,10 @@ const medPrecautions = {
     foods:
       "These can increase abemaciclib levels and the risk of side effects.",
     references: [
-      "Eli Lilly Canada Inc. VERZENIO (abemaciclib) Product Monograph – Including Patient Medication Information. Toronto (ON): Eli Lilly Canada Inc.; 2025 Jul 24. Submission Control No. 293494.",
-      "Health Canada. Product Monograph Guidance for Marketed Pharmaceuticals. Ottawa (ON): Health Canada; 2023.",
-      "Pavlovic M, et al. Ther Adv Med Oncol. 2023;15:17588359231205621.",
-      "Denduluri N, et al. J Clin Oncol. 2020;38(33):3774–3787.",
+      "1. Eli Lilly Canada Inc. VERZENIO (abemaciclib) Product Monograph – Including Patient Medication Information. Toronto (ON): Eli Lilly Canada Inc.; 2025 Jul 24. Submission Control No. 293494. ",
+      "2. Health Canada. Product Monograph Guidance for Marketed Pharmaceuticals. Ottawa (ON): Health Canada; 2023. ",
+      "3. Pavlovic M, et al. Ther Adv Med Oncol. 2023;15:17588359231205621. ",
+      "4. Denduluri N, et al. J Clin Oncol. 2020;38(33):3774–3787.",
     ],
   },
 
@@ -43,11 +43,11 @@ const medPrecautions = {
     foods:
       "These can raise ribociclib levels in your blood and increase the chance of side effects.",
     references: [
-      "Novartis Pharmaceuticals Canada Inc. KISQALI (ribociclib) Product Monograph – Including Patient Medication Information. Montreal (QC): Novartis Pharmaceuticals Canada Inc.; 2025 Jun 12. Submission Control No. 283993. ",
-      "Health Canada. Product Monograph Guidance for Marketed Pharmaceuticals. Ottawa (ON): Health Canada; 2023. ",
-      "Loibl S et al. Ann Oncol. 2023;34(5):437-450. ",
-      "Pavlovic M et al. Ther Adv Med Oncol. 2023;15:17588359231205621. ",
-      "Denduluri N et al. J Clin Oncol. 2020;38(33):3774-3787.",
+      "1. Novartis Pharmaceuticals Canada Inc. KISQALI (ribociclib) Product Monograph – Including Patient Medication Information. Montreal (QC): Novartis Pharmaceuticals Canada Inc.; 2025 Jun 12. Submission Control No. 283993. ",
+      "2. Health Canada. Product Monograph Guidance for Marketed Pharmaceuticals. Ottawa (ON): Health Canada; 2023. ",
+      "3. Loibl S et al. Ann Oncol. 2023;34(5):437-450. ",
+      "4. Pavlovic M et al. Ther Adv Med Oncol. 2023;15:17588359231205621. ",
+      "5. Denduluri N et al. J Clin Oncol. 2020;38(33):3774-3787.",
     ],
   },
 };
@@ -169,7 +169,7 @@ export function MedicationPrecautions({
           role="doc-bibliography"
           aria-labelledby="references-heading"
         >
-          <p className="text-sm text-gray-700">
+          <p>
             This is not a complete list of medicines or foods that may interact
             with {medicationKey}. Always check with your healthcare provider or
             pharmacist before starting or stopping any medication or supplement.
@@ -177,39 +177,12 @@ export function MedicationPrecautions({
           <h2 id="references-heading" className="sr-only">
             References
           </h2>
-          <ol className="gap-2 text-sm text-gray-700">
-            <li id="ref1" tabIndex={-1} className="inline">
-              <a href="#ref1-back">
-                <span className="sr-only">Back to reference </span>1.
-              </a>{" "}
-              {medPrecautions[medicationKey].references[0]}
-            </li>{" "}
-            <li id="ref2" tabIndex={-1} className="inline">
-              <a href="#ref2-back">
-                <span className="sr-only">Back to reference </span>2.
-              </a>{" "}
-              {medPrecautions[medicationKey].references[1]}
-            </li>{" "}
-            <li id="ref3" tabIndex={-1} className="inline">
-              <a href="#ref3-back">
-                <span className="sr-only">Back to reference </span>3.
-              </a>{" "}
-              {medPrecautions[medicationKey].references[2]}
-            </li>
-            <li id="ref4" tabIndex={-1} className="inline">
-              <a href="#ref4-back">
-                <span className="sr-only">Back to reference </span>4.
-              </a>{" "}
-              {medPrecautions[medicationKey].references[3]}
-            </li>
-            {medPrecautions[medicationKey].references[4] && (
-              <li id="ref5" tabIndex={-1} className="inline">
-                <a href="#ref5-back">
-                  <span className="sr-only">Back to reference </span>5.
-                </a>{" "}
-                {medPrecautions[medicationKey].references[4]}
+          <ol className="gap-2">
+            {medPrecautions[medicationKey].references.map((ref, index) => (
+              <li key={index} className="inline">
+                {ref}
               </li>
-            )}
+            ))}
           </ol>
         </footer>
       </div>

@@ -124,7 +124,10 @@ export function CharacteristicsElevatedRisk() {
           </div>
         </main>
         <footer className="mt-auto text-sm text-gray-700">
-          Cucciniello L, et al. Cancer Treat Rev. 2023;120:102624.
+          <h2 className="sr-only">References</h2>
+          <ol>
+            <li>Cucciniello L, et al. Cancer Treat Rev. 2023;120:102624.</li>
+          </ol>
         </footer>
       </div>
     </PageLayout>

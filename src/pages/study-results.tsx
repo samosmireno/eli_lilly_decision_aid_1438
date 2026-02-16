@@ -17,8 +17,11 @@ const studyResults = {
     ],
     studyDesign:
       "MonarchE study design: Phase 3, randomized, open-label trial of 5,637 adults with HR-positive, HER2-negative, node-positive, high-risk early breast cancer. Participants received abemaciclib (150 mg twice daily for 2 years) + standard adjuvant endocrine therapy or endocrine therapy alone. Primary endpoint: Invasive Disease-Free Survival (IDFS). Median follow-up: ~7 years (76 months). Results: 7-yr IDFS HR 0.734 (95% CI 0.657–0.820). Overall Survival (OS) HR 0.842 (95% CI 0.722–0.981). Benefit continued after treatment completion at 2 years. Efficacy results are not directly comparable to other studies.",
-    references:
-      "Johnston S, et al. ESMO 2025 Annual Congress; Abstract LBA13. Johnston S, et al. Ann Oncol. 2025; In press. Eli Lilly Canada Inc. VERZENIO (abemaciclib) Product Monograph – Including Patient Medication Information. Toronto (ON): Eli Lilly Canada Inc.; 2025 Jul 24. Submission Control No. 293494.",
+    references: [
+      "Johnston S, et al. ESMO 2025 Annual Congress; Abstract LBA13. ",
+      "Johnston S, et al. Ann Oncol. 2025 In press.",
+      "Eli Lilly Canada Inc. VERZENIO (abemaciclib) Product Monograph – Including Patient Medication Information. Toronto (ON); 2025 Jul 24. Submission Control No. 293494.",
+    ],
   },
   ribociclib: {
     medication: "ribociclib (Kisqali)",
@@ -36,8 +39,11 @@ const studyResults = {
     ],
     studyDesign:
       "NATALEE study design: Phase 3, randomized, open-label trial of 5,101 adults with HR-positive, HER2-negative, stage II–III early breast cancer, including some with node-negative disease at higher risk of recurrence. Participants received ribociclib 400 mg once daily (3 weeks on/1 week off) with a non-steroidal aromatase inhibitor (NSAI) for 3 years vs NSAI alone. Primary endpoint: invasive disease-free survival (IDFS). At ~5-year follow-up, IDFS was 88.5% with ribociclib + hormone therapy vs 83.6% with hormone therapy alone, corresponding to ~29% relative reduction in the risk of recurrence; benefit was consistent across subgroups, and no new safety concerns were identified.",
-    references:
-      "Crown J, et al. ESMO Open. 2025;10(11):105858. Novartis Pharmaceuticals Canada Inc., KISQALI Product Monograph, 2025. Slamon D, et al. N Engl J Med. 2024. ClinicalTrials.gov Identifier: NCT03701334.",
+    references: [
+      "Crown J, et al. ESMO Open. 2025;10(11):105858. ",
+      "Novartis Pharmaceuticals Canada Inc., KISQALI Product Monograph, 2025. ",
+      "Slamon D, et al. N Engl J Med. 2024. ClinicalTrials.gov Identifier: NCT03701334.",
+    ],
   },
 };
 
@@ -116,7 +122,14 @@ export function StudyResults({ medicationKey, part }: StudyResultsProps) {
         <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
           <p>{study.details[part - 1]}</p>
           <p>{study.studyDesign}</p>
-          <p>{study.references}</p>
+          <h2 className="sr-only">References</h2>
+          <ol>
+            {study.references.map((ref, index) => (
+              <li key={index} className="inline">
+                {ref}
+              </li>
+            ))}
+          </ol>
         </footer>
       </div>
     </PageLayout>

@@ -101,8 +101,17 @@ const careJourneyData = {
       },
     ],
     disclaimer: "This guide does not replace your care team's advice.",
-    footer:
-      "BC, breast cancer; ECG, electrocardiogram; ET, endocrine therapy; mg, milligram; °C, degrees Celsius.\n1. Eli Lilly Canada Inc. VERZENIO® (abemaciclib) Product Monograph – Including Patient Medication Information. Toronto (ON); 2025 Jul 24. Submission Control No. 293494. See Warnings and Precautions (early diarrhea management/myelosuppression; neutropenia/thrombocytopenia; venous thromboembolism/pulmonary embolism; embryo-fetal risk) and Monitoring and Laboratory Tests (CBC and LFTs before treatment, every 2 weeks for the first 2 months, monthly for the next 2 months, then as clinically indicated; dose modifications per PM). 2. Johnston SRD, et al. Lancet Oncol. 2023;24(1):77–90. (monarchE 5-year analysis; protocol-defined timing and efficacy). 3. Johnston SRD, et al. J Clin Oncol. 2023;41(31):5563–5574. (monarchE final update). 4. Pavlovic M, et al. Ther Adv Med Oncol. 2023;15:17588359231209521. (Quality-of-life maintained; no new long-term safety signals). 4. Denduluri N, et al. J Clin Oncol. 2020;38(33):3774–3787. (Clinician guidance on CDK4/6 inhibitor AE recognition and management).",
+    footer: {
+      abbreviations:
+        "BC, breast cancer; ECG, electrocardiogram; ET, endocrine therapy; mg, milligram; °C, degrees Celsius.",
+      references: [
+        "1. Eli Lilly Canada Inc. VERZENIO® (abemaciclib) Product Monograph – Including Patient Medication Information. Toronto (ON); 2025 Jul 24. Submission Control No. 293494. See Warnings and Precautions (early diarrhea management; neutropenia/infection; hepatotoxicity; venous thromboembolism; interstitial lung disease/pneumonitis; embryo-fetal risk) and Monitoring and Laboratory Tests (CBC and LFTs before treatment, every 2 weeks for the first 2 months, monthly for the next 2 months, then as clinically indicated; dose modifications per PM). ",
+        "2. Johnston SRD, et al. Lancet Oncol. 2023;24(1):77–90. (monarchE 5-year analysis; protocol-defined timing and efficacy). ",
+        "3. Johnston SRD, et al. J Clin Oncol. 2023;41(31):5563–5574. (monarchE final efficacy/safety update). ",
+        "4. Pavlovic M, et al. Ther Adv Med Oncol. 2023;15:17588359231209521. (Quality-of-life maintained; no new long-term safety signals). ",
+        "5. Denduluri N, et al. J Clin Oncol. 2020;38(33):3774–3787. (Clinician guidance on CDK4/6 inhibitor AE recognition and management).",
+      ],
+    },
   },
   ribociclib: {
     title: "The care journey: for patients eligible for ribociclib",
@@ -203,8 +212,15 @@ const careJourneyData = {
       },
     ],
     disclaimer: "This guide does not replace your care team's advice.",
-    footer:
-      "BC, breast cancer; ECG, electrocardiogram; ET, endocrine therapy; mg, milligram; °C, degrees Celsius.\n1. Novartis Pharmaceuticals Canada Inc. KISQALI® (ribociclib) Product Monograph – Including Patient Medication Information. Montreal (QC); 2025 Jun 12. Submission Control No. 283993. Refer to Sections 3 (Serious Warnings and Precautions Box) and 7 (Warnings and Precautions) for details on QT prolongation, hepatotoxicity, interstitial lung disease/pneumonitis, and hematological monitoring. CBC, liver function tests, and ECG should be performed at baseline, Day 14 of Cycle 1, every 2 weeks for the first 2 cycles, and monthly for cycles 3–6, then as clinically indicated. 2. Hussain M, et al. Ther Adv Med Oncol. 2025; 20:17588359251326710. (NATALEE safety and monitoring summary). 3. Slamon D, et al. N Engl J Med. 2024; 390:1080–1091. (NATALEE primary analysis).",
+    footer: {
+      abbreviations:
+        "BC, breast cancer; ECG, electrocardiogram; ET, endocrine therapy; mg, milligram; °C, degrees Celsius.",
+      references: [
+        "1. Novartis Pharmaceuticals Canada Inc. KISQALI® (ribociclib) Product Monograph – Including Patient Medication Information. Montreal (QC); 2025 Jun 12. Submission Control No. 283993. Refer to Sections 3 (Serious Warnings and Precautions Box) and 7 (Warnings and Precautions) for details on QT prolongation, hepatotoxicity, interstitial lung disease/pneumonitis, and hematologic monitoring. CBC, liver function tests, and ECG should be performed at baseline, Day 14 of Cycle 1, every 2 weeks for the first 2 cycles, and monthly for cycles 3–6, then as clinically indicated. ",
+        "2. Hussain M, et al. Ther Adv Med Oncol. 2025; 20:17588359251326710. (NATALEE safety and monitoring summary). ",
+        "3. Slamon D, et al. N Engl J Med. 2024; 390:1080–1091. (NATALEE primary analysis).",
+      ],
+    },
   },
 };
 
@@ -276,7 +292,15 @@ export function MedicationCareJourney({
           </div>
         </main>
         <footer className="mt-auto text-sm whitespace-pre-line text-gray-700">
-          <p>{data.footer}</p>
+          <p>{data.footer.abbreviations}</p>
+          <h2 className="sr-only">References</h2>
+          <ol>
+            {data.footer.references.map((ref, index) => (
+              <li key={index} className="inline">
+                {ref}
+              </li>
+            ))}
+          </ol>
         </footer>
       </div>
     </PageLayout>

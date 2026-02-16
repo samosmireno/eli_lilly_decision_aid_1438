@@ -44,8 +44,14 @@ const medSideEffects = {
     ],
     bottomMessage:
       "Most side effects were manageable, reversible, and improved with early reporting, helping many people stay on treatment.",
-    footer:
-      "ET, endocrine therapy. *Reported grade ≥3 infections were ~5% in the abemaciclib + ET arm vs 3% in ET alone. †Reported grade ≥3 hematologic and GI events were < 1% in the ET alone group.\nEli Lilly Canada Inc. VERZENIO (abemaciclib) Product Monograph. Section 7 – Warnings and Precautions (diarrhea/early management; neutropenia & infection risk; hepatotoxicity; venous thromboembolism; interstitial lung disease/pneumonitis; embryo-fetal risk). Section 8 – Adverse Reactions (frequency and severity of common and serious AEs). Safety profile remained consistent with longer-term follow-up, with no new or delayed safety concerns reported; side effects were manageable with early intervention.\nJohnston S, et al. ESMO 2025; Abstract LBA13. Johnston S, et al. Ann Oncol. 2025 (in press). Eli Lilly Canada Inc., VERZENIO Product Monograph – Including Patient Medication Information. Toronto (ON): 2025 Jul 24. Submission Control No. 293494.",
+    footer: {
+      abbreviations: "ET, endocrine therapy",
+      footnote:
+        "*Reported grade ≥3 infections were ~5% in the abemaciclib + ET arm vs 3% in ET alone. †Reported grade ≥3 hematologic and GI events were < 1% in the ET alone group. Eli Lilly Canada Inc. VERZENIO (abemaciclib) Product Monograph. Section 7 – Warnings and Precautions (diarrhea/early management; neutropenia & infection risk; hepatotoxicity; venous thromboembolism; interstitial lung disease/pneumonitis; embryo-fetal risk). Section 8 – Adverse Reactions (frequency and severity of common and serious AEs). Safety profile remained consistent with longer-term follow-up, with no new or delayed safety concerns reported; side effects were manageable with early intervention.",
+      references: [
+        "Johnston S, et al. ESMO 2025; Abstract LBA13. Johnston S, et al. Ann Oncol. 2025 (in press). Eli Lilly Canada Inc., VERZENIO Product Monograph – Including Patient Medication Information. Toronto (ON); 2025 Jul 24. Submission Control No. 293494.",
+      ],
+    },
   },
   ribociclib: {
     title: "Common Side Effects (ribociclib)",
@@ -81,8 +87,18 @@ const medSideEffects = {
     ],
     bottomMessage:
       "No new safety concerns were identified after 5 years of follow-up.*",
-    footer:
-      "AI, aromatase inhibitor; ALT, alanine aminotransferase; AST, aspartate transaminase.\n*Reported Grade ≥ 3 adverse events occurred in 58 % of patients receiving ribociclib + endocrine therapy and 18 % of those receiving endocrine therapy alone NATALEE trial design: Phase III, randomized, open-label study of 5,101 adults with HR+/HER2− stage II–III early breast cancer, including some with node-negative disease at higher risk of recurrence. Participants received ribociclib 400 mg daily (3 weeks on / 1 week off) for 3 years + NSAI. Most common grade ≥3 AEs were neutropenia (42%), ALT increase (6%), AST increase (4%). Serious AEs occurred in 14.8%; treatment discontinuation due to AEs was 20%. At ~5-year follow-up, no new safety concerns were identified.\nFasching PA et al. JAMA Oncol. 2025; Slamon D et al. N Engl J Med. 2024; Loibl S et al. Ann Oncol. 2024; KISQALI Product Monograph, Novartis Pharmaceuticals Canada Inc., 2025; NCT03701334.",
+    footer: {
+      abbreviations:
+        "AI, aromatase inhibitor; ALT, alanine aminotransferase; AST, aspartate transaminase.",
+      footnote:
+        "*Reported Grade ≥ 3 adverse events occurred in 58 % of patients receiving ribociclib + endocrine therapy and 18 % of those receiving endocrine therapy alone NATALEE trial design: Phase III, randomized, open-label study of 5,101 adults with HR+/HER2− stage II–III early breast cancer, including some with node-negative disease at higher risk of recurrence. Participants received ribociclib 400 mg daily (3 weeks on / 1 week off) for 3 years + NSAI. Most common grade ≥3 AEs were neutropenia (42%), ALT increase (6%), AST increase (4%). Serious AEs occurred in 14.8%; treatment discontinuation due to AEs was 20%. At ~5-year follow-up, no new safety concerns were identified.",
+      references: [
+        "Fasching PA et al. JAMA Oncol. 2025; ",
+        "Slamon D et al. N Engl J Med. 2024; ",
+        "Loibl S et al. Ann Oncol. 2024; ",
+        "KISQALI Product Monograph, Novartis Pharmaceuticals Canada Inc., 2025; NCT03701334.",
+      ],
+    },
   },
 };
 
@@ -149,7 +165,15 @@ export function MedicationSideEffects({
           </div>
         </main>
         <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
-          {data.footer}
+          <p>{data.footer.abbreviations}</p>
+          <p>{data.footer.footnote}</p>
+          <ol>
+            {data.footer.references.map((ref, index) => (
+              <li key={index} className="inline">
+                {ref}
+              </li>
+            ))}
+          </ol>
         </footer>
       </div>
     </PageLayout>
