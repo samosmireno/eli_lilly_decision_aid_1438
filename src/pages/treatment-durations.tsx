@@ -3,13 +3,15 @@ import { PageLayout } from "../components/page-layout";
 export default function TreatmentDurations() {
   return (
     <PageLayout title="Treatment Durations">
-      <div className="mt-5 flex flex-col gap-6">
-        <img
-          src="/placeholder-image.jpg"
-          alt="Treatment duration visualization"
-          className="h-120 w-full border border-gray-900"
-        />
-        <footer className="">
+      <div className="mt-5 flex min-h-[calc(100vh-140px)] flex-col">
+        <main>
+          <img
+            src="/placeholder-image.jpg"
+            alt="Treatment duration visualization"
+            className="h-120 w-full border border-gray-900"
+          />
+        </main>
+        <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
           <p>
             *Endocrine therapy is typically administered for at least 5 years
             and may be extended to up to 10 years based on recurrence risk and

@@ -62,53 +62,57 @@ export function Study({ studyKey }: StudyProps) {
   const study = studies[studyKey];
   return (
     <PageLayout title="Adding a CDK4/6 Inhibitor Further Reduced the Risk of Cancer Returning">
-      <div className="mt-8 mr-16 space-y-8">
-        <h2 className="text-2xl">
-          <span className="font-semibold">{study.title} </span>
-          <span className="italic">
-            Based on the {study.shortTitle} study in HR+/HER2- early breast
-            cancer
-          </span>
-        </h2>
+      <div className="mt-8 mr-16 flex min-h-[calc(100vh-156px)] flex-col">
+        <main className="space-y-8">
+          <h2 className="text-2xl">
+            <span className="font-semibold">{study.title} </span>
+            <span className="italic">
+              Based on the {study.shortTitle} study in HR+/HER2- early breast
+              cancer
+            </span>
+          </h2>
 
-        <div className="flex flex-row gap-5">
-          <img
-            src={study.image.src}
-            alt={study.image.alt}
-            className="h-96 w-120 border border-gray-900"
-          />
+          <div className="flex flex-row gap-5">
+            <img
+              src={study.image.src}
+              alt={study.image.alt}
+              className="h-96 w-120 border border-gray-900"
+            />
 
-          <div className="space-y-6">
-            <div className="max-w-2xl border border-gray-900 p-4">
-              <h3 className="text-2xl">What does this mean in real numbers?</h3>
-              <p className="mb-6 text-2xl font-semibold">
-                {study.results.relativeRiskReduction} relative reduction in the
-                risk of cancer returning (IDFS) at {study.results.years} years.
-              </p>
-              <p className="text-2xl">
-                {study.desription.population}
-                <span className="font-semibold">
-                  {study.desription.people}
-                </span>{" "}
-                {study.desription.result}
-              </p>
+            <div className="space-y-6">
+              <div className="max-w-2xl border border-gray-900 p-4">
+                <h3 className="text-2xl">
+                  What does this mean in real numbers?
+                </h3>
+                <p className="mb-6 text-2xl font-semibold">
+                  {study.results.relativeRiskReduction} relative reduction in
+                  the risk of cancer returning (IDFS) at {study.results.years}{" "}
+                  years.
+                </p>
+                <p className="text-2xl">
+                  {study.desription.population}
+                  <span className="font-semibold">
+                    {study.desription.people}
+                  </span>{" "}
+                  {study.desription.result}
+                </p>
+              </div>
+
+              <section className="flex flex-row items-center gap-4 pl-20">
+                <Button
+                  onClick={() => {}}
+                  className="h-16 w-16 rounded-full border border-gray-900 bg-white text-gray-900 hover:cursor-pointer hover:bg-gray-100"
+                >
+                  +
+                </Button>
+                <p className="text-xl font-semibold">
+                  Common Side Effects ({study.medication})
+                </p>
+              </section>
             </div>
-
-            <section className="flex flex-row items-center gap-4 pl-20">
-              <Button
-                onClick={() => {}}
-                className="h-16 w-16 rounded-full border border-gray-900 bg-white text-gray-900 hover:cursor-pointer hover:bg-gray-100"
-              >
-                +
-              </Button>
-              <p className="text-xl font-semibold">
-                Common Side Effects ({study.medication})
-              </p>
-            </section>
           </div>
-        </div>
-
-        <footer className="">
+        </main>
+        <footer className="mt-auto text-sm whitespace-pre-line text-gray-700">
           <p className="font-semibold">{study.footnote.bold}</p>
           <p className="">{study.footnote.text}</p>
           <p>{study.footnote.references}</p>

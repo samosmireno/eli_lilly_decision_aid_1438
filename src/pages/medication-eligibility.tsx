@@ -53,110 +53,116 @@ export function MedicationEligibility({
 }: medicationEligibilityProps) {
   return (
     <PageLayout title="Who can take abemaciclib (Verzenio), and when is it not recommended?">
-      <div className="mt-4 flex gap-6">
-        <img
-          src="/abemaciclib-eligibility.png"
-          alt="Abemaciclib eligibility"
-          className="h-135 w-96 border border-black"
-        />
+      <div className="mt-4 mr-16 flex min-h-[calc(100vh-136px)] flex-col">
+        <main className="flex gap-6">
+          <img
+            src="/abemaciclib-eligibility.png"
+            alt="Abemaciclib eligibility"
+            className="h-135 w-96 border border-black"
+          />
 
-        <div className="flex flex-1 flex-col items-start space-y-1 border-l-2 border-gray-900 pl-7">
-          <section className="relative -translate-y-2">
-            <h2 className="mb-1 text-2xl font-semibold">Who should take it</h2>
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="absolute top-2 -left-8.75"
-            >
-              <circle cx="6" cy="6" r="6" fill="black" />
-            </svg>
-            <ul className="list-disc pl-6 text-lg">
-              {medEligibility[medicationKey].who.map((item, index) => (
-                <li key={index} className="leading-5">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section className="relative">
-            <h2 className="mb-1 text-2xl font-semibold">When not to take</h2>{" "}
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="absolute top-2 -left-8.75"
-            >
-              <circle cx="6" cy="6" r="6" fill="black" />
-            </svg>
-            <ul className="list-disc pl-6 text-lg">
-              {medEligibility[medicationKey].when.map((item, index) => (
-                <li key={index} className="leading-5">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section className="relative">
-            <h2 className="mb-1 text-2xl font-semibold">Precautions</h2>{" "}
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="absolute top-2 -left-8.75"
-            >
-              <circle cx="6" cy="6" r="6" fill="black" />
-            </svg>
-            <ul className="list-disc pl-6 text-lg">
-              {medEligibility[medicationKey].precautions.map((item, index) => (
-                <li key={index} className="leading-5">
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-2 text-lg italic">
-              ⚠️ Do not wait for your next oncology visit.
-            </p>
-          </section>
-
-          <section className="relative">
-            <h2 className="mb-1 text-2xl font-semibold">
-              Special considerations
-            </h2>{" "}
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="absolute top-2 -left-8.75"
-            >
-              <circle cx="6" cy="6" r="6" fill="black" />
-            </svg>
-            <ul className="list-disc pl-6 text-lg">
-              {medEligibility[medicationKey].specialConsiderations.map(
-                (item, index) => (
+          <div className="flex flex-1 flex-col items-start space-y-1 border-l-2 border-gray-900 pl-7">
+            <section className="relative -translate-y-2">
+              <h2 className="mb-1 text-2xl font-semibold">
+                Who should take it
+              </h2>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute top-2 -left-8.75"
+              >
+                <circle cx="6" cy="6" r="6" fill="black" />
+              </svg>
+              <ul className="list-disc pl-6 text-lg">
+                {medEligibility[medicationKey].who.map((item, index) => (
                   <li key={index} className="leading-5">
                     {item}
                   </li>
-                ),
-              )}
-            </ul>
-          </section>
-        </div>
-      </div>
+                ))}
+              </ul>
+            </section>
 
-      <footer className="mt-6 text-base leading-snug text-gray-700">
-        <p>{medEligibility[medicationKey].footer}</p>
-      </footer>
+            <section className="relative">
+              <h2 className="mb-1 text-2xl font-semibold">When not to take</h2>{" "}
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute top-2 -left-8.75"
+              >
+                <circle cx="6" cy="6" r="6" fill="black" />
+              </svg>
+              <ul className="list-disc pl-6 text-lg">
+                {medEligibility[medicationKey].when.map((item, index) => (
+                  <li key={index} className="leading-5">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="relative">
+              <h2 className="mb-1 text-2xl font-semibold">Precautions</h2>{" "}
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute top-2 -left-8.75"
+              >
+                <circle cx="6" cy="6" r="6" fill="black" />
+              </svg>
+              <ul className="list-disc pl-6 text-lg">
+                {medEligibility[medicationKey].precautions.map(
+                  (item, index) => (
+                    <li key={index} className="leading-5">
+                      {item}
+                    </li>
+                  ),
+                )}
+              </ul>
+              <p className="mt-2 text-lg italic">
+                ⚠️ Do not wait for your next oncology visit.
+              </p>
+            </section>
+
+            <section className="relative">
+              <h2 className="mb-1 text-2xl font-semibold">
+                Special considerations
+              </h2>{" "}
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute top-2 -left-8.75"
+              >
+                <circle cx="6" cy="6" r="6" fill="black" />
+              </svg>
+              <ul className="list-disc pl-6 text-lg">
+                {medEligibility[medicationKey].specialConsiderations.map(
+                  (item, index) => (
+                    <li key={index} className="leading-5">
+                      {item}
+                    </li>
+                  ),
+                )}
+              </ul>
+            </section>
+          </div>
+        </main>
+
+        <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
+          <p>{medEligibility[medicationKey].footer}</p>
+        </footer>
+      </div>
     </PageLayout>
   );
 }

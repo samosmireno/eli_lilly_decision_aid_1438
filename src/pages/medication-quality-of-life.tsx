@@ -91,7 +91,7 @@ export function MedicationQualityOfLife({
   return (
     <PageLayout title={data.title}>
       <div className="flex min-h-[calc(100vh-120px)] flex-col">
-        <div className="flex-1">
+        <main className="flex-1">
           <section className="mb-4">
             <div className="relative">
               <h2 className="mb-3 border-b-2 border-gray-900 pb-2 pl-5 text-2xl font-semibold">
@@ -153,7 +153,7 @@ export function MedicationQualityOfLife({
               </p>
             </div>
           </div>
-        </div>
+        </main>
         <footer className="mt-auto text-sm text-gray-700">
           <p>{data.footer}</p>
         </footer>

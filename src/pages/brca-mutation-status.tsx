@@ -3,8 +3,8 @@ import { PageLayout } from "../components/page-layout";
 export function BrcaMutationStatus() {
   return (
     <PageLayout title="BRCA1/2 Mutation Status">
-      <div className="mt-4 mr-16 space-y-6">
-        <div className="flex flex-row gap-4">
+      <div className="mt-4 mr-16 flex min-h-[calc(100vh-136px)] flex-col">
+        <main className="flex flex-row gap-4">
           <div className="space-y-3 p-4">
             <section>
               <p className="text-2xl">
@@ -61,9 +61,9 @@ export function BrcaMutationStatus() {
             alt="BRCA mutation"
             className="h-128 w-full border border-gray-900"
           />
-        </div>
+        </main>
 
-        <footer className="mt-3">
+        <footer className="mt-auto text-sm leading-5 text-gray-700">
           <section
             role="doc-endnotes"
             aria-labelledby="footnotes-heading"

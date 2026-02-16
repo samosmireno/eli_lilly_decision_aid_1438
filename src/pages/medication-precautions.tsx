@@ -63,108 +63,109 @@ export function MedicationPrecautions({
     <PageLayout
       title={`Other medicines and foods to be careful with while taking ${medPrecautions[medicationKey].medication}`}
     >
-      <div className="mr-16 space-y-4">
-        <section aria-labelledby="care-team" className="relative">
-          <h2 id="care-team" className="mb-3 text-2xl font-semibold">
-            Tell your care team about everything you take
-          </h2>
-          <ul className="list-disc pl-6 text-lg">
-            <li>
-              Always share a list of all medicines, supplements, or herbal
-              products you use, even vitamins or things bought without a
-              prescription.
-            </li>
-            <li>
-              This helps your care team make sure {medicationKey} stays safe and
-              effective for you.
-            </li>
-            <li>Bring your medication list to every visit</li>
-          </ul>
-        </section>
-        <div className="flex flex-row gap-4 border-t-2 border-gray-900 pt-4">
-          <section
-            aria-labelledby="medicine-interactions"
-            className="relative w-full max-w-3xl"
-          >
-            <div className="mb-4 flex items-start gap-3">
-              <img
-                src=" /interactions.png"
-                alt="Medicine interactions"
-                className="h-12 w-16 border border-gray-900"
-              />
-              <div>
-                <h2
-                  id="medicine-interactions"
-                  className="mb-3 text-2xl font-semibold"
-                >
-                  Some medicines can affect how {medicationKey} works
-                </h2>
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="absolute -top-6 left-0"
-                >
-                  <circle cx="6" cy="6" r="6" fill="black" />
-                </svg>
+      <div className="mr-16 flex min-h-[calc(100vh-120px)] flex-col">
+        <main className="space-y-4">
+          <section aria-labelledby="care-team" className="relative">
+            <h2 id="care-team" className="mb-3 text-2xl font-semibold">
+              Tell your care team about everything you take
+            </h2>
+            <ul className="list-disc pl-6 text-lg">
+              <li>
+                Always share a list of all medicines, supplements, or herbal
+                products you use, even vitamins or things bought without a
+                prescription.
+              </li>
+              <li>
+                This helps your care team make sure {medicationKey} stays safe
+                and effective for you.
+              </li>
+              <li>Bring your medication list to every visit</li>
+            </ul>
+          </section>
+          <div className="flex flex-row gap-4 border-t-2 border-gray-900 pt-4">
+            <section
+              aria-labelledby="medicine-interactions"
+              className="relative w-full max-w-3xl"
+            >
+              <div className="mb-4 flex items-start gap-3">
+                <img
+                  src=" /interactions.png"
+                  alt="Medicine interactions"
+                  className="h-12 w-16 border border-gray-900"
+                />
+                <div>
+                  <h2
+                    id="medicine-interactions"
+                    className="mb-3 text-2xl font-semibold"
+                  >
+                    Some medicines can affect how {medicationKey} works
+                  </h2>
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="absolute -top-6 left-0"
+                  >
+                    <circle cx="6" cy="6" r="6" fill="black" />
+                  </svg>
+                  <ul className="list-disc pl-6 text-lg">
+                    {medPrecautions[medicationKey].effects.map(
+                      (effect, index) => (
+                        <li key={index}>{effect}</li>
+                      ),
+                    )}
+                    <li>Examples include: +</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="border border-gray-900 bg-white p-4">
                 <ul className="list-disc pl-6 text-lg">
-                  {medPrecautions[medicationKey].effects.map(
-                    (effect, index) => (
-                      <li key={index}>{effect}</li>
+                  {medPrecautions[medicationKey].examples.map(
+                    (example, index) => (
+                      <li key={index}>{example}</li>
                     ),
                   )}
-                  <li>Examples include: +</li>
                 </ul>
               </div>
-            </div>
-            <div className="border border-gray-900 bg-white p-4">
-              <ul className="list-disc pl-6 text-lg">
-                {medPrecautions[medicationKey].examples.map(
-                  (example, index) => (
-                    <li key={index}>{example}</li>
-                  ),
-                )}
-              </ul>
-            </div>
-          </section>
+            </section>
 
-          <section aria-labelledby="foods-to-avoid" className="relative">
-            <div className="mb-4 flex items-start gap-4">
-              <img
-                src=" /interactions.png"
-                alt="Medicine interactions"
-                className="h-12 w-16 border border-gray-900"
-              />
-              <div>
-                <h2 id="foods-to-avoid" className="text-2xl font-bold">
-                  Foods to avoid
-                </h2>
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="absolute -top-6 left-0"
-                >
-                  <circle cx="6" cy="6" r="6" fill="black" />
-                </svg>
-                <ul className="list-disc pl-6 text-lg">
-                  <li>
-                    Avoid grapefruit and grapefruit juice (and foods containing
-                    grapefruit).
-                  </li>
-                  <li>{medPrecautions[medicationKey].foods}</li>
-                </ul>
+            <section aria-labelledby="foods-to-avoid" className="relative">
+              <div className="mb-4 flex items-start gap-4">
+                <img
+                  src=" /interactions.png"
+                  alt="Medicine interactions"
+                  className="h-12 w-16 border border-gray-900"
+                />
+                <div>
+                  <h2 id="foods-to-avoid" className="text-2xl font-bold">
+                    Foods to avoid
+                  </h2>
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="absolute -top-6 left-0"
+                  >
+                    <circle cx="6" cy="6" r="6" fill="black" />
+                  </svg>
+                  <ul className="list-disc pl-6 text-lg">
+                    <li>
+                      Avoid grapefruit and grapefruit juice (and foods
+                      containing grapefruit).
+                    </li>
+                    <li>{medPrecautions[medicationKey].foods}</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-          </section>
-        </div>
-
+            </section>
+          </div>
+        </main>
         <footer
-          className="mt-6"
+          className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700"
           role="doc-bibliography"
           aria-labelledby="references-heading"
         >

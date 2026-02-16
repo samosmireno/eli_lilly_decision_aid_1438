@@ -3,34 +3,35 @@ import { PageLayout } from "../components/page-layout";
 export function RoleCDK46Inhibitors() {
   return (
     <PageLayout title="Role of CDK4/6 inhibitors in HR+ Early Breast Cancer">
-      <div className="mt-4 mr-16 space-y-8">
-        <ul className="list-disc text-2xl">
-          <li className="ml-6">
-            Cancer cells grow by dividing controlled by proteins called CDK4 and
-            CDK6
-            <sup>
-              <a href="#footnote1" id="footnote1-back">
-                <span className="sr-only">Footnote </span>*
-              </a>
-            </sup>
-            .
-          </li>
-          <li className="ml-6">
-            CDK4/6 inhibitors prevent cancer cells from moving through the cell
-            cycle.
-          </li>
-          <li className="ml-6">
-            This helps keep cancer cells from multiplying.
-          </li>
-        </ul>
+      <div className="mt-4 mr-16 flex min-h-[calc(100vh-136px)] flex-col">
+        <main>
+          <ul className="mb-8 list-disc text-2xl">
+            <li className="ml-6">
+              Cancer cells grow by dividing controlled by proteins called CDK4
+              and CDK6
+              <sup>
+                <a href="#footnote1" id="footnote1-back">
+                  <span className="sr-only">Footnote </span>*
+                </a>
+              </sup>
+              .
+            </li>
+            <li className="ml-6">
+              CDK4/6 inhibitors prevent cancer cells from moving through the
+              cell cycle.
+            </li>
+            <li className="ml-6">
+              This helps keep cancer cells from multiplying.
+            </li>
+          </ul>
 
-        <img
-          src="/cdk4-6-inhibitors.png"
-          alt="CDK4/6 inhibitors mechanism of action"
-          className="mx-auto h-96 max-w-2xl border border-gray-900"
-        />
-
-        <footer>
+          <img
+            src="/cdk4-6-inhibitors.png"
+            alt="CDK4/6 inhibitors mechanism of action"
+            className="mx-auto h-96 w-full max-w-2xl border border-gray-900"
+          />
+        </main>
+        <footer className="mt-auto text-sm leading-5 text-gray-700">
           <section
             role="doc-endnotes"
             aria-labelledby="footnotes-heading"

@@ -97,57 +97,58 @@ export function MedicationSideEffects({
 
   return (
     <PageLayout title={data.title}>
-      <div className="mr-16 space-y-3">
-        <h2 className="text-2xl font-semibold">{data.subtitle}</h2>
+      <div className="mr-16 flex min-h-[calc(100vh-120px)] flex-col space-y-3">
+        <main>
+          <h2 className="text-2xl font-semibold">{data.subtitle}</h2>
 
-        <div className="flex flex-row gap-4">
-          <img
-            src={data.image.src}
-            alt={data.image.alt}
-            className="h-96 w-60 border border-black"
-          />
+          <div className="flex flex-row gap-4">
+            <img
+              src={data.image.src}
+              alt={data.image.alt}
+              className="h-96 w-60 border border-black"
+            />
 
-          {/* Middle: Side effects list */}
-          <div className="flex-1 space-y-2 p-4">
-            {data.sideEffects.map((effect, index) => (
-              <div key={index}>
-                <h3 className="text-lg font-semibold">{effect.category}</h3>
-                <ul className="list-disc pl-6 text-lg leading-5">
-                  {effect.items.map((item, itemIndex) => (
-                    <li key={itemIndex}>{item}</li>
-                  ))}
-                </ul>
+            {/* Middle: Side effects list */}
+            <div className="flex-1 space-y-2 p-4">
+              {data.sideEffects.map((effect, index) => (
+                <div key={index}>
+                  <h3 className="text-lg font-semibold">{effect.category}</h3>
+                  <ul className="list-disc pl-6 text-lg leading-5">
+                    {effect.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-1 flex-col gap-2">
+              <div className="flex flex-col gap-2 border border-gray-900 p-4">
+                <div>
+                  <h3 className="mb-2 text-xl leading-6 font-semibold">
+                    <span className="text-xl">⚠</span> Important symptoms - seek
+                    medical care right away
+                  </h3>
+                  <ul className="list-disc border border-gray-900 p-2 pl-6 text-lg leading-5">
+                    {data.importantSymptoms.map((symptom, index) => (
+                      <li key={index}>{symptom}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="border border-gray-900 p-2">
+                  <p className="text-lg leading-5 font-semibold">
+                    Do not wait for your next oncology visit. Contact your
+                    clinic or go to the ER.
+                  </p>
+                </div>
               </div>
-            ))}
-          </div>
-          <div className="flex flex-1 flex-col gap-2">
-            <div className="flex flex-col gap-2 border border-gray-900 p-4">
-              <div>
-                <h3 className="mb-2 text-xl leading-6 font-semibold">
-                  <span className="text-xl">⚠</span> Important symptoms - seek
-                  medical care right away
-                </h3>
-                <ul className="list-disc border border-gray-900 p-2 pl-6 text-lg leading-5">
-                  {data.importantSymptoms.map((symptom, index) => (
-                    <li key={index}>{symptom}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="border border-gray-900 p-2">
-                <p className="text-lg leading-5 font-semibold">
-                  Do not wait for your next oncology visit. Contact your clinic
-                  or go to the ER.
-                </p>
+              <div className="border border-gray-900 p-4">
+                <p className="text-lg leading-5">{data.bottomMessage}</p>
               </div>
             </div>
-            <div className="border border-gray-900 p-4">
-              <p className="text-lg leading-5">{data.bottomMessage}</p>
-            </div>
           </div>
-        </div>
-
-        <footer className="mt-3 text-sm leading-5 whitespace-pre-line text-gray-700">
+        </main>
+        <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
           {data.footer}
         </footer>
       </div>

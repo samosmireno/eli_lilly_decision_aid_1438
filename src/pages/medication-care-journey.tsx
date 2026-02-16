@@ -220,7 +220,7 @@ export function MedicationCareJourney({
   return (
     <PageLayout title={data.title}>
       <div className="flex min-h-[calc(100vh-120px)] flex-col">
-        <div className="flex-1">
+        <main className="flex-1">
           <h2 className="mb-3 text-xl font-bold">{data.medicationName}</h2>
           <div className="mb-4">
             <div className="relative mb-0 flex items-center gap-2">
@@ -274,7 +274,7 @@ export function MedicationCareJourney({
           <div className="mb-6 text-center">
             <p className="text-xl font-semibold">{data.disclaimer}</p>
           </div>
-        </div>
+        </main>
         <footer className="mt-auto text-sm whitespace-pre-line text-gray-700">
           <p>{data.footer}</p>
         </footer>
