@@ -63,7 +63,7 @@ export function MedicationPrecautions({
     <PageLayout
       title={`Other medicines and foods to be careful with while taking ${medPrecautions[medicationKey].medication}`}
     >
-      <article className="mr-16 space-y-4">
+      <div className="mr-16 space-y-4">
         <section aria-labelledby="care-team" className="relative">
           <h2 id="care-team" className="mb-3 text-2xl font-semibold">
             Tell your care team about everything you take
@@ -211,7 +211,7 @@ export function MedicationPrecautions({
             )}
           </ol>
         </footer>
-      </article>
+      </div>
     </PageLayout>
   );
 }

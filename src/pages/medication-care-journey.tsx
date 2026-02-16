@@ -221,12 +221,8 @@ export function MedicationCareJourney({
     <PageLayout title={data.title}>
       <div className="flex min-h-[calc(100vh-120px)] flex-col">
         <div className="flex-1">
-          {/* Medication Name Header */}
           <h2 className="mb-3 text-xl font-bold">{data.medicationName}</h2>
-
-          {/* Flow Diagram */}
           <div className="mb-4">
-            {/* Arrow Headers */}
             <div className="relative mb-0 flex items-center gap-2">
               {data.steps.map((step, index) => (
                 <div key={index} className="relative flex-1">
@@ -249,8 +245,6 @@ export function MedicationCareJourney({
                 </div>
               ))}
             </div>
-
-            {/* Content Boxes */}
             <div className="flex gap-2">
               {data.steps.map((step, index) => (
                 <div
@@ -277,14 +271,10 @@ export function MedicationCareJourney({
               ))}
             </div>
           </div>
-
-          {/* Disclaimer */}
           <div className="mb-6 text-center">
             <p className="text-xl font-semibold">{data.disclaimer}</p>
           </div>
         </div>
-
-        {/* Footer */}
         <footer className="mt-auto text-sm whitespace-pre-line text-gray-700">
           <p>{data.footer}</p>
         </footer>

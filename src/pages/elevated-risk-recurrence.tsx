@@ -4,7 +4,7 @@ import { PageLayout } from "../components/page-layout";
 export function ElevatedRiskRecurrence() {
   return (
     <PageLayout title="Elevated Risk of Recurrence">
-      <article className="mt-8 mr-16 space-y-8">
+      <div className="mt-8 mr-16 space-y-8">
         <section className="flex flex-row items-center justify-start gap-4">
           <h2 className="text-2xl font-bold">
             What does higher risk mean in early breast cancer?
@@ -118,7 +118,7 @@ export function ElevatedRiskRecurrence() {
             </li>
           </ol>
         </footer>
-      </article>
+      </div>
     </PageLayout>
   );
 }

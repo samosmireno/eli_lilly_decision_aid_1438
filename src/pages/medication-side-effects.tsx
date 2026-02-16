@@ -97,7 +97,7 @@ export function MedicationSideEffects({
 
   return (
     <PageLayout title={data.title}>
-      <article className="mr-16 space-y-3">
+      <div className="mr-16 space-y-3">
         <h2 className="text-2xl font-semibold">{data.subtitle}</h2>
 
         <div className="flex flex-row gap-4">
@@ -150,7 +150,7 @@ export function MedicationSideEffects({
         <footer className="mt-3 text-sm leading-5 whitespace-pre-line text-gray-700">
           {data.footer}
         </footer>
-      </article>
+      </div>
     </PageLayout>
   );
 }

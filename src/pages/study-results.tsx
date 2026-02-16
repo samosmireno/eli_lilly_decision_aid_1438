@@ -48,7 +48,7 @@ export function StudyResults({ medicationKey, part }: StudyResultsProps) {
     <PageLayout
       title={`How ${study.medication} helped people stay cancer-free in the ${study.study} study`}
     >
-      <article className="mr-16 space-y-4">
+      <div className="mr-16 space-y-4">
         <section aria-labelledby="study-summary" className="relative">
           <h2
             id="study-summary"
@@ -113,7 +113,7 @@ export function StudyResults({ medicationKey, part }: StudyResultsProps) {
           <p>{study.studyDesign}</p>
           <p>{study.references}</p>
         </footer>
-      </article>
+      </div>
     </PageLayout>
   );
 }

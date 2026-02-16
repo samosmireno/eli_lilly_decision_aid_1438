@@ -3,7 +3,7 @@ import { PageLayout } from "../components/page-layout";
 export function BrcaMutationStatus() {
   return (
     <PageLayout title="BRCA1/2 Mutation Status">
-      <article className="mt-4 mr-16 space-y-6">
+      <div className="mt-4 mr-16 space-y-6">
         <div className="flex flex-row gap-4">
           <div className="space-y-3 p-4">
             <section>
@@ -121,7 +121,7 @@ export function BrcaMutationStatus() {
             </ol>
           </section>
         </footer>
-      </article>
+      </div>
     </PageLayout>
   );
 }
