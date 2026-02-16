@@ -64,11 +64,7 @@ export function BrcaMutationStatus() {
         </main>
 
         <footer className="mt-auto text-sm leading-5 text-gray-700">
-          <section
-            role="doc-endnotes"
-            aria-labelledby="footnotes-heading"
-            className="text-sm text-gray-700"
-          >
+          <section aria-labelledby="footnotes-heading">
             <h2 id="footnotes-heading" className="sr-only">
               Footnotes
             </h2>
@@ -89,11 +85,7 @@ export function BrcaMutationStatus() {
             </p>
           </section>
 
-          <section
-            role="doc-glossary"
-            aria-labelledby="abbreviations-heading"
-            className="text-sm text-gray-700"
-          >
+          <section aria-labelledby="abbreviations-heading">
             <h2 id="abbreviations-heading" className="sr-only">
               Abbreviations
             </h2>
@@ -105,20 +97,14 @@ export function BrcaMutationStatus() {
             </p>
           </section>
 
-          <section
-            role="doc-bibliography"
-            aria-labelledby="references-heading"
-            className="text-sm text-gray-700"
-          >
+          <section aria-labelledby="references-heading">
             <h2 id="references-heading" className="sr-only">
               References
             </h2>
-            <ol>
-              <li tabIndex={-1}>
-                Tutt ANJ, et al., New England Journal of Medicine.
-                2021;384:2394-2405.
-              </li>
-            </ol>
+            <p tabIndex={-1}>
+              Tutt ANJ, et al., New England Journal of Medicine.
+              2021;384:2394-2405.
+            </p>
           </section>
         </footer>
       </div>

@@ -170,17 +170,32 @@ export function MedicationEligibility({
           </div>
         </main>
 
-        <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
-          <p>{medEligibility[medicationKey].footer.details}</p>
-          <ol>
-            {medEligibility[medicationKey].footer.references.map(
-              (ref, index) => (
-                <li key={index} className="inline">
-                  {ref}
-                </li>
-              ),
-            )}
-          </ol>
+        <footer className="mt-auto text-sm leading-5 text-gray-700">
+          <section aria-labelledby="indication-heading">
+            <h2 id="indication-heading" className="sr-only">
+              Indication
+            </h2>
+            <p>{medEligibility[medicationKey].footer.details}</p>
+          </section>
+
+          <section aria-labelledby="references-heading">
+            <h2 id="references-heading" className="sr-only">
+              References
+            </h2>
+            <p>
+              {medEligibility[medicationKey].footer.references.map(
+                (ref, index) => (
+                  <span key={index}>
+                    {ref}
+                    {index <
+                    medEligibility[medicationKey].footer.references.length - 1
+                      ? " "
+                      : ""}
+                  </span>
+                ),
+              )}
+            </p>
+          </section>
         </footer>
       </div>
     </PageLayout>

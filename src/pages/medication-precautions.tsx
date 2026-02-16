@@ -164,26 +164,34 @@ export function MedicationPrecautions({
             </section>
           </div>
         </main>
-        <footer
-          className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700"
-          role="doc-bibliography"
-          aria-labelledby="references-heading"
-        >
-          <p>
-            This is not a complete list of medicines or foods that may interact
-            with {medicationKey}. Always check with your healthcare provider or
-            pharmacist before starting or stopping any medication or supplement.
-          </p>
-          <h2 id="references-heading" className="sr-only">
-            References
-          </h2>
-          <ol className="gap-2">
-            {medPrecautions[medicationKey].references.map((ref, index) => (
-              <li key={index} className="inline">
-                {ref}
-              </li>
-            ))}
-          </ol>
+        <footer className="mt-auto text-sm leading-5 text-gray-700">
+          <section aria-labelledby="disclaimer-heading">
+            <h2 id="disclaimer-heading" className="sr-only">
+              Important Notice
+            </h2>
+            <p>
+              This is not a complete list of medicines or foods that may
+              interact with {medicationKey}. Always check with your healthcare
+              provider or pharmacist before starting or stopping any medication
+              or supplement.
+            </p>
+          </section>
+
+          <section aria-labelledby="references-heading">
+            <h2 id="references-heading" className="sr-only">
+              References
+            </h2>
+            <p>
+              {medPrecautions[medicationKey].references.map((ref, index) => (
+                <span key={index}>
+                  {ref}
+                  {index < medPrecautions[medicationKey].references.length - 1
+                    ? " "
+                    : ""}
+                </span>
+              ))}
+            </p>
+          </section>
         </footer>
       </div>
     </PageLayout>

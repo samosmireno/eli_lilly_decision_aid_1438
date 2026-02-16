@@ -113,9 +113,22 @@ export function Study({ studyKey }: StudyProps) {
           </div>
         </main>
         <footer className="mt-auto text-sm whitespace-pre-line text-gray-700">
-          <p className="font-semibold">{study.footnote.bold}</p>
-          <p className="">{study.footnote.text}</p>
-          <p>{study.footnote.references}</p>
+          <section aria-labelledby="study-details-heading">
+            <h2 id="study-details-heading" className="sr-only">
+              Study Details
+            </h2>
+            <p>
+              <strong>{study.footnote.bold}</strong>
+            </p>
+            <p>{study.footnote.text}</p>
+          </section>
+
+          <section aria-labelledby="references-heading">
+            <h2 id="references-heading" className="sr-only">
+              References
+            </h2>
+            <p>{study.footnote.references}</p>
+          </section>
         </footer>
       </div>
     </PageLayout>

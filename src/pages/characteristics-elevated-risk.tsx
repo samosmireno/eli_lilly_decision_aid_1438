@@ -123,11 +123,11 @@ export function CharacteristicsElevatedRisk() {
             </div>
           </div>
         </main>
-        <footer className="mt-auto text-sm text-gray-700">
-          <h2 className="sr-only">References</h2>
-          <ol>
-            <li>Cucciniello L, et al. Cancer Treat Rev. 2023;120:102624.</li>
-          </ol>
+        <footer className="mt-auto text-sm leading-5 text-gray-700">
+          <p>
+            <span className="sr-only">Reference: </span>
+            Cucciniello L, et al. Cancer Treat Rev. 2023;120:102624.
+          </p>
         </footer>
       </div>
     </PageLayout>

@@ -291,16 +291,27 @@ export function MedicationCareJourney({
             <p className="text-xl font-semibold">{data.disclaimer}</p>
           </div>
         </main>
-        <footer className="mt-auto text-sm whitespace-pre-line text-gray-700">
-          <p>{data.footer.abbreviations}</p>
-          <h2 className="sr-only">References</h2>
-          <ol>
-            {data.footer.references.map((ref, index) => (
-              <li key={index} className="inline">
-                {ref}
-              </li>
-            ))}
-          </ol>
+        <footer className="mt-auto text-sm text-gray-700">
+          <section aria-labelledby="abbreviations-heading">
+            <h2 id="abbreviations-heading" className="sr-only">
+              Abbreviations
+            </h2>
+            <p>{data.footer.abbreviations}</p>
+          </section>
+
+          <section aria-labelledby="references-heading">
+            <h2 id="references-heading" className="sr-only">
+              References
+            </h2>
+            <p>
+              {data.footer.references.map((ref, index) => (
+                <span key={index}>
+                  {ref}
+                  {index < data.footer.references.length - 1 ? " " : ""}
+                </span>
+              ))}
+            </p>
+          </section>
         </footer>
       </div>
     </PageLayout>

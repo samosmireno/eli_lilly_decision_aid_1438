@@ -89,35 +89,33 @@ export function ElevatedRiskRecurrence() {
             </li>
           </ul>
         </main>
-        <footer
-          className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700"
-          role="doc-bibliography"
-          aria-labelledby="references-heading"
-        >
-          <h2 id="references-heading" className="sr-only">
-            References
-          </h2>
-          <ol className="text-sm text-gray-700">
-            <li id="ref1" tabIndex={-1} className="inline">
-              <a href="#ref1-back">
-                <span className="sr-only">Back to reference </span>1.
-              </a>{" "}
-              Pan H, et al. N Engl J Med. 2017;377(19):1836-1846.
-            </li>{" "}
-            <li id="ref2" tabIndex={-1} className="inline">
-              <a href="#ref2-back">
-                <span className="sr-only">Back to reference </span>2.
-              </a>{" "}
-              Early Breast Cancer Trialists' Collaborative Group (EBCTCG), et
-              al., Lancet. 2011;378(9793):771-784.
-            </li>{" "}
-            <li id="ref3" tabIndex={-1} className="inline">
-              <a href="#ref3-back">
-                <span className="sr-only">Back to reference </span>3.
-              </a>{" "}
-              Burstein HJ, et al. J Clin Oncol. 2019;37(5):423-438.
-            </li>
-          </ol>
+        <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
+          <section aria-labelledby="references-heading">
+            <h2 id="references-heading" className="sr-only">
+              References
+            </h2>
+            <ol className="text-sm text-gray-700">
+              <li id="ref1" tabIndex={-1} className="inline">
+                <a href="#ref1-back">
+                  <span className="sr-only">Back to reference </span>1.
+                </a>{" "}
+                Pan H, et al. N Engl J Med. 2017;377(19):1836-1846.
+              </li>{" "}
+              <li id="ref2" tabIndex={-1} className="inline">
+                <a href="#ref2-back">
+                  <span className="sr-only">Back to reference </span>2.
+                </a>{" "}
+                Early Breast Cancer Trialists' Collaborative Group (EBCTCG), et
+                al., Lancet. 2011;378(9793):771-784.
+              </li>{" "}
+              <li id="ref3" tabIndex={-1} className="inline">
+                <a href="#ref3-back">
+                  <span className="sr-only">Back to reference </span>3.
+                </a>{" "}
+                Burstein HJ, et al. J Clin Oncol. 2019;37(5):423-438.
+              </li>
+            </ol>
+          </section>
         </footer>
       </div>
     </PageLayout>

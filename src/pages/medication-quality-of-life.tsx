@@ -173,15 +173,26 @@ export function MedicationQualityOfLife({
           </div>
         </main>
         <footer className="mt-auto text-sm text-gray-700">
-          <p>{data.footer.details}</p>
-          <h2 className="sr-only">References</h2>
-          <ol>
-            {data.footer.references.map((ref, index) => (
-              <li key={index} className="inline">
-                {ref}
-              </li>
-            ))}
-          </ol>
+          <section aria-labelledby="study-design-heading">
+            <h2 id="study-design-heading" className="sr-only">
+              Study Design
+            </h2>
+            <p>{data.footer.details}</p>
+          </section>
+
+          <section aria-labelledby="references-heading">
+            <h2 id="references-heading" className="sr-only">
+              References
+            </h2>
+            <p>
+              {data.footer.references.map((ref, index) => (
+                <span key={index}>
+                  {ref}
+                  {index < data.footer.references.length - 1 ? " " : ""}
+                </span>
+              ))}
+            </p>
+          </section>
         </footer>
       </div>
     </PageLayout>

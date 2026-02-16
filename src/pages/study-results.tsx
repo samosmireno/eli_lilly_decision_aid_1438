@@ -119,17 +119,28 @@ export function StudyResults({ medicationKey, part }: StudyResultsProps) {
             </div>
           </section>
         </main>
-        <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
-          <p>{study.details[part - 1]}</p>
-          <p>{study.studyDesign}</p>
-          <h2 className="sr-only">References</h2>
-          <ol>
-            {study.references.map((ref, index) => (
-              <li key={index} className="inline">
-                {ref}
-              </li>
-            ))}
-          </ol>
+        <footer className="mt-auto text-sm leading-5 text-gray-700">
+          <section aria-labelledby="study-details-heading">
+            <h2 id="study-details-heading" className="sr-only">
+              Study Details
+            </h2>
+            <p>{study.details[part - 1]}</p>
+            <p>{study.studyDesign}</p>
+          </section>
+
+          <section aria-labelledby="references-heading">
+            <h2 id="references-heading" className="sr-only">
+              References
+            </h2>
+            <p>
+              {study.references.map((ref, index) => (
+                <span key={index}>
+                  {ref}
+                  {index < study.references.length - 1 ? " " : ""}
+                </span>
+              ))}
+            </p>
+          </section>
         </footer>
       </div>
     </PageLayout>

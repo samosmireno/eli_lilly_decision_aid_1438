@@ -26,23 +26,34 @@ export default function TreatmentDurations() {
             className="h-120 w-full border border-gray-900"
           />
         </main>
-        <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
-          <h2 className="sr-only">Footnotes</h2>
-          <ol>
-            {footnotes.map((note, index) => (
-              <li key={index} className="inline">
-                {note}
-              </li>
-            ))}
-          </ol>
-          <h2 className="sr-only">References</h2>
-          <ol>
-            {references.map((ref, index) => (
-              <li key={index} className="inline">
-                {ref}
-              </li>
-            ))}
-          </ol>
+        <footer className="mt-auto text-sm leading-5 text-gray-700">
+          <section aria-labelledby="footnotes-heading">
+            <h2 id="footnotes-heading" className="sr-only">
+              Footnotes
+            </h2>
+            <p>
+              {footnotes.map((note, index) => (
+                <span key={index}>
+                  {note}
+                  {index < footnotes.length - 1 ? " " : ""}
+                </span>
+              ))}
+            </p>
+          </section>
+
+          <section aria-labelledby="references-heading">
+            <h2 id="references-heading" className="sr-only">
+              References
+            </h2>
+            <p>
+              {references.map((ref, index) => (
+                <span key={index}>
+                  {ref}
+                  {index < references.length - 1 ? " " : ""}
+                </span>
+              ))}
+            </p>
+          </section>
         </footer>
       </div>
     </PageLayout>

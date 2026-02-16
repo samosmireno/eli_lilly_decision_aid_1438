@@ -157,43 +157,41 @@ export function EndocrineTherapyBenefits() {
           </div>
         </main>
 
-        <footer
-          className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700"
-          role="doc-bibliography"
-          aria-labelledby="references-heading"
-        >
-          <h2 id="references-heading" className="sr-only">
-            References
-          </h2>
-          <ol className="text-sm text-gray-700">
-            <li id="ref1" tabIndex={-1} className="inline">
-              <a href="#ref1-back">
-                <span className="sr-only">Back to reference </span>1.
-              </a>{" "}
-              NCCN Guidelines for Patients®: Ductal Carcinoma In Situ. Version
-              1. 2025. National Comprehensive Cancer Network (NCCN).
-            </li>{" "}
-            <li id="ref2" tabIndex={-1} className="inline">
-              <a href="#ref2-back">
-                <span className="sr-only">Back to reference </span>2.
-              </a>{" "}
-              Early Breast Cancer Trialists' Collaborative Group (EBCTCG).
-              Lancet. 2005;365:1687-1717.
-            </li>{" "}
-            <li id="ref3" tabIndex={-1} className="inline">
-              <a href="#ref3-back">
-                <span className="sr-only">Back to reference </span>3.
-              </a>{" "}
-              Early Breast Cancer Trialists' Collaborative Group (EBCTCG).
-              Lancet. 2005;365:1687-1717.
-            </li>{" "}
-            <li id="ref4" tabIndex={-1} className="inline">
-              <a href="#ref4-back">
-                <span className="sr-only">Back to reference </span>4.
-              </a>{" "}
-              Pagani O, et al. J Clin Oncol. 2023;41:1376-1382.
-            </li>
-          </ol>
+        <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
+          <section aria-labelledby="references-heading">
+            <h2 id="references-heading" className="sr-only">
+              References
+            </h2>
+            <ol className="text-sm text-gray-700">
+              <li id="ref1" tabIndex={-1} className="inline">
+                <a href="#ref1-back">
+                  <span className="sr-only">Back to reference </span>1.
+                </a>{" "}
+                NCCN Guidelines for Patients®: Ductal Carcinoma In Situ. Version
+                1. 2025. National Comprehensive Cancer Network (NCCN).
+              </li>{" "}
+              <li id="ref2" tabIndex={-1} className="inline">
+                <a href="#ref2-back">
+                  <span className="sr-only">Back to reference </span>2.
+                </a>{" "}
+                Early Breast Cancer Trialists' Collaborative Group (EBCTCG).
+                Lancet. 2005;365:1687-1717.
+              </li>{" "}
+              <li id="ref3" tabIndex={-1} className="inline">
+                <a href="#ref3-back">
+                  <span className="sr-only">Back to reference </span>3.
+                </a>{" "}
+                Early Breast Cancer Trialists' Collaborative Group (EBCTCG).
+                Lancet. 2005;365:1687-1717.
+              </li>{" "}
+              <li id="ref4" tabIndex={-1} className="inline">
+                <a href="#ref4-back">
+                  <span className="sr-only">Back to reference </span>4.
+                </a>{" "}
+                Pagani O, et al. J Clin Oncol. 2023;41:1376-1382.
+              </li>
+            </ol>
+          </section>
         </footer>
       </div>
     </PageLayout>

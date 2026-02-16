@@ -164,16 +164,34 @@ export function MedicationSideEffects({
             </div>
           </div>
         </main>
-        <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
-          <p>{data.footer.abbreviations}</p>
-          <p>{data.footer.footnote}</p>
-          <ol>
-            {data.footer.references.map((ref, index) => (
-              <li key={index} className="inline">
-                {ref}
-              </li>
-            ))}
-          </ol>
+        <footer className="mt-auto text-sm leading-5 text-gray-700">
+          <section aria-labelledby="abbreviations-heading">
+            <h2 id="abbreviations-heading" className="sr-only">
+              Abbreviations
+            </h2>
+            <p>{data.footer.abbreviations}</p>
+          </section>
+
+          <section aria-labelledby="footnote-heading">
+            <h2 id="footnote-heading" className="sr-only">
+              Footnote
+            </h2>
+            <p>{data.footer.footnote}</p>
+          </section>
+
+          <section aria-labelledby="references-heading">
+            <h2 id="references-heading" className="sr-only">
+              References
+            </h2>
+            <p>
+              {data.footer.references.map((ref, index) => (
+                <span key={index}>
+                  {ref}
+                  {index < data.footer.references.length - 1 ? " " : ""}
+                </span>
+              ))}
+            </p>
+          </section>
         </footer>
       </div>
     </PageLayout>

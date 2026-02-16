@@ -32,33 +32,24 @@ export function RoleCDK46Inhibitors() {
           />
         </main>
         <footer className="mt-auto text-sm leading-5 text-gray-700">
-          <section
-            role="doc-endnotes"
-            aria-labelledby="footnotes-heading"
-            className="text-sm text-gray-700"
-          >
+          <section aria-labelledby="footnotes-heading">
             <h2 id="footnotes-heading" className="sr-only">
               Footnotes
             </h2>
-            <ol id="footnote1" tabIndex={-1}>
-              <li>
-                <a href="#footnote1-back">
-                  <span className="sr-only">Back to footnote </span>*
-                </a>{" "}
-                CDK4/6 inhibitors are targeted therapies that block
-                cyclin-dependent kinases 4 and 6, key regulators of cell-cycle
-                progression, thereby slowing or stopping cancer cell division.
-                CDK4/6 inhibitors are used in combination with endocrine therapy
-                in selected patients with HR+ early breast cancer to further
-                reduce the risk of disease recurrence.
-              </li>
-            </ol>
+            <p id="footnote1" tabIndex={-1}>
+              <a href="#footnote1-back">
+                <span className="sr-only">Back to footnote </span>*
+              </a>{" "}
+              CDK4/6 inhibitors are targeted therapies that block
+              cyclin-dependent kinases 4 and 6, key regulators of cell-cycle
+              progression, thereby slowing or stopping cancer cell division.
+              CDK4/6 inhibitors are used in combination with endocrine therapy
+              in selected patients with HR+ early breast cancer to further
+              reduce the risk of disease recurrence.
+            </p>
           </section>
 
-          <section
-            aria-labelledby="abbreviations-heading"
-            className="text-sm text-gray-700"
-          >
+          <section aria-labelledby="abbreviations-heading">
             <h2 id="abbreviations-heading" className="sr-only">
               Abbreviations
             </h2>
@@ -68,11 +59,7 @@ export function RoleCDK46Inhibitors() {
             </p>
           </section>
 
-          <section
-            role="doc-bibliography"
-            aria-labelledby="references-heading"
-            className="text-sm text-gray-700"
-          >
+          <section aria-labelledby="references-heading">
             <h2 id="references-heading" className="sr-only">
               References
             </h2>

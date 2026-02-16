@@ -46,34 +46,32 @@ export function EndocrineTherapySideEffects() {
             </p>
           </section>
         </main>
-        <footer
-          className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700"
-          role="doc-bibliography"
-          aria-labelledby="references-heading"
-        >
-          <h2 id="references-heading" className="sr-only">
-            References
-          </h2>
-          <ol className="flex flex-wrap gap-2 text-sm text-gray-700">
-            <li id="ref1" tabIndex={-1}>
-              <a href="#ref1-back">
-                <span className="sr-only">Back to reference </span>1.
-              </a>{" "}
-              Cucciniello L, et al. Cancer Treat Rev. 2023;120:102624.
-            </li>{" "}
-            <li id="ref2" tabIndex={-1}>
-              <a href="#ref2-back">
-                <span className="sr-only">Back to reference </span>2.
-              </a>{" "}
-              Eliassen FM, et al. BMC Cancer. 2023;23(1):625.
-            </li>{" "}
-            <li id="ref3" tabIndex={-1}>
-              <a href="#ref3-back">
-                <span className="sr-only">Back to reference </span>3.
-              </a>{" "}
-              Chang CY, et al. Br J Cancer. 2024;130(12):1943-1950.
-            </li>
-          </ol>
+        <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
+          <section aria-labelledby="references-heading">
+            <h2 id="references-heading" className="sr-only">
+              References
+            </h2>
+            <ol className="flex flex-wrap gap-2 text-sm text-gray-700">
+              <li id="ref1" tabIndex={-1}>
+                <a href="#ref1-back">
+                  <span className="sr-only">Back to reference </span>1.
+                </a>{" "}
+                Cucciniello L, et al. Cancer Treat Rev. 2023;120:102624.
+              </li>{" "}
+              <li id="ref2" tabIndex={-1}>
+                <a href="#ref2-back">
+                  <span className="sr-only">Back to reference </span>2.
+                </a>{" "}
+                Eliassen FM, et al. BMC Cancer. 2023;23(1):625.
+              </li>{" "}
+              <li id="ref3" tabIndex={-1}>
+                <a href="#ref3-back">
+                  <span className="sr-only">Back to reference </span>3.
+                </a>{" "}
+                Chang CY, et al. Br J Cancer. 2024;130(12):1943-1950.
+              </li>
+            </ol>
+          </section>
         </footer>
       </div>
     </PageLayout>
