@@ -1,24 +1,24 @@
-import { Button } from "@/components/ui/button";
+//import { Button } from "@/components/ui/button";
 import { PageLayout } from "../components/page-layout";
 
 export function ElevatedRiskRecurrence() {
   return (
     <PageLayout title="Elevated Risk of Recurrence">
-      <div className="mt-8 mr-16 flex min-h-[calc(100vh-152px)] flex-col">
-        <main className="space-y-8">
+      <div className="flex min-h-[calc(100vh-152px)] flex-col md:mr-16 lg:mt-8">
+        <main className="space-y-4 md:space-y-8">
           <section className="flex flex-row items-center justify-start gap-4">
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-center text-xl font-semibold sm:text-left md:text-2xl">
               What does higher risk mean in early breast cancer?
             </h2>
-            <Button
+            {/* <Button
               onClick={() => {}}
               className="h-8 w-8 rounded-full border border-gray-900 bg-white text-gray-900 hover:cursor-pointer hover:bg-gray-100"
             >
               +
-            </Button>
+            </Button> */}
           </section>
 
-          <ul className="list-disc space-y-6 text-2xl">
+          <ul className="list-disc text-base sm:text-xl md:space-y-3 md:text-2xl lg:space-y-6">
             <li className="ml-6">
               Even after surgery, chemotherapy, or hormone therapy, some cancers
               have features that make them more likely to come back.
@@ -89,7 +89,7 @@ export function ElevatedRiskRecurrence() {
             </li>
           </ul>
         </main>
-        <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
+        <footer className="mt-auto pt-4 text-sm leading-5 whitespace-pre-line text-gray-700">
           <section aria-labelledby="references-heading">
             <h2 id="references-heading" className="sr-only">
               References

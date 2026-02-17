@@ -44,16 +44,18 @@ export default function CDK46InhibitorEligibility({
 
   return (
     <PageLayout title="CDK4/6 inhibitor eligibility">
-      <div className="mt-20 flex w-full items-center justify-center">
+      <div className="flex w-full items-center justify-center lg:mt-20">
         <main className="flex h-120 w-80 flex-col justify-center border border-black bg-white px-3">
           <div className="text-center">
-            <p className="mb-6 text-2xl font-semibold">
+            <p className="mb-6 text-xl font-semibold md:text-2xl">
               {scenario.characteristics}
             </p>
 
-            <p className="mb-28 text-2xl font-semibold">{scenario.fullText}</p>
+            <p className="mb-26 text-xl font-semibold md:mb-28 md:text-2xl">
+              {scenario.fullText}
+            </p>
 
-            <Button className="bg-white text-xl text-gray-900 italic hover:cursor-pointer hover:bg-inherit hover:underline">
+            <Button className="bg-white text-base text-gray-900 italic hover:cursor-pointer hover:bg-inherit hover:underline sm:text-lg md:text-xl">
               click to learn more
             </Button>
           </div>

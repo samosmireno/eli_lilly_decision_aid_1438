@@ -62,9 +62,9 @@ export function Study({ studyKey }: StudyProps) {
   const study = studies[studyKey];
   return (
     <PageLayout title="Adding a CDK4/6 Inhibitor Further Reduced the Risk of Cancer Returning">
-      <div className="mt-8 mr-16 flex min-h-[calc(100vh-156px)] flex-col">
-        <main className="space-y-8">
-          <h2 className="text-2xl">
+      <div className="flex min-h-[calc(100vh-156px)] flex-col md:mr-16 lg:mt-8">
+        <main className="space-y-4 md:space-y-8">
+          <h2 className="text-center text-base sm:text-xl md:text-2xl lg:text-left">
             <span className="font-semibold">{study.title} </span>
             <span className="italic">
               Based on the {study.shortTitle} study in HR+/HER2- early breast
@@ -72,24 +72,22 @@ export function Study({ studyKey }: StudyProps) {
             </span>
           </h2>
 
-          <div className="flex flex-row gap-5">
+          <div className="flex flex-col items-center justify-center gap-4 lg:flex-row lg:gap-5">
             <img
               src={study.image.src}
               alt={study.image.alt}
-              className="h-96 w-120 border border-gray-900"
+              className="h-96 w-full border border-gray-900 lg:w-120"
             />
 
             <div className="space-y-6">
-              <div className="max-w-2xl border border-gray-900 p-4">
-                <h3 className="text-2xl">
-                  What does this mean in real numbers?
-                </h3>
-                <p className="mb-6 text-2xl font-semibold">
+              <div className="max-w-2xl border border-gray-900 p-4 text-base sm:text-xl md:text-2xl">
+                <h3>What does this mean in real numbers?</h3>
+                <p className="font-semibold md:mb-6">
                   {study.results.relativeRiskReduction} relative reduction in
                   the risk of cancer returning (IDFS) at {study.results.years}{" "}
                   years.
                 </p>
-                <p className="text-2xl">
+                <p>
                   {study.desription.population}
                   <span className="font-semibold">
                     {study.desription.people}
@@ -98,27 +96,27 @@ export function Study({ studyKey }: StudyProps) {
                 </p>
               </div>
 
-              <section className="flex flex-row items-center gap-4 pl-20">
+              <section className="flex flex-row items-center md:gap-4 md:pl-20">
                 <Button
                   onClick={() => {}}
-                  className="h-16 w-16 rounded-full border border-gray-900 bg-white text-gray-900 hover:cursor-pointer hover:bg-gray-100"
+                  className="order-2 h-16 w-12 rounded-none border border-gray-900 bg-white text-gray-900 hover:cursor-pointer hover:bg-gray-100 md:order-1 md:w-16 md:rounded-full"
                 >
                   +
                 </Button>
-                <p className="text-xl font-semibold">
+                <p className="order-1 flex h-16 w-full items-center justify-center border border-gray-900 text-base font-semibold md:order-2 md:h-fit md:w-fit md:border-none md:text-left md:text-xl">
                   Common Side Effects ({study.medication})
                 </p>
               </section>
             </div>
           </div>
         </main>
-        <footer className="mt-auto text-sm whitespace-pre-line text-gray-700">
+        <footer className="mt-auto pt-4 text-sm whitespace-pre-line text-gray-700">
           <section aria-labelledby="study-details-heading">
             <h2 id="study-details-heading" className="sr-only">
               Study Details
             </h2>
             <p>
-              <strong>{study.footnote.bold}</strong>
+              <span className="font-semibold">{study.footnote.bold}</span>
             </p>
             <p>{study.footnote.text}</p>
           </section>

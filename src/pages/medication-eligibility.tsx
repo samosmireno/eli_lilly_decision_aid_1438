@@ -64,17 +64,17 @@ export function MedicationEligibility({
 }: medicationEligibilityProps) {
   return (
     <PageLayout title="Who can take abemaciclib (Verzenio), and when is it not recommended?">
-      <div className="mt-4 mr-16 flex min-h-[calc(100vh-136px)] flex-col">
+      <div className="flex min-h-[calc(100vh-136px)] flex-col md:mr-16 lg:mt-4">
         <main className="flex gap-6">
           <img
             src="/abemaciclib-eligibility.png"
             alt="Abemaciclib eligibility"
-            className="h-135 w-96 border border-black"
+            className="hidden h-135 w-96 border border-black lg:block"
           />
 
-          <div className="flex flex-1 flex-col items-start space-y-1 border-l-2 border-gray-900 pl-7">
+          <div className="flex flex-1 flex-col items-start space-y-4 border-gray-900 md:space-y-1 md:border-l-2 md:pl-7">
             <section className="relative -translate-y-2">
-              <h2 className="mb-1 text-2xl font-semibold">
+              <h2 className="mb-3 text-center text-xl font-semibold md:mb-1 md:text-left md:text-2xl">
                 Who should take it
               </h2>
               <svg
@@ -83,13 +83,13 @@ export function MedicationEligibility({
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute top-2 -left-8.75"
+                className="absolute top-2 -left-8.75 hidden md:block"
               >
                 <circle cx="6" cy="6" r="6" fill="black" />
               </svg>
               <ul className="list-disc pl-6 text-lg">
                 {medEligibility[medicationKey].who.map((item, index) => (
-                  <li key={index} className="leading-5">
+                  <li key={index} className="md:leading-5">
                     {item}
                   </li>
                 ))}
@@ -97,20 +97,22 @@ export function MedicationEligibility({
             </section>
 
             <section className="relative">
-              <h2 className="mb-1 text-2xl font-semibold">When not to take</h2>{" "}
+              <h2 className="mb-3 text-center text-xl font-semibold md:mb-1 md:text-left md:text-2xl">
+                When not to take
+              </h2>{" "}
               <svg
                 width="12"
                 height="12"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute top-2 -left-8.75"
+                className="absolute top-2 -left-8.75 hidden md:block"
               >
                 <circle cx="6" cy="6" r="6" fill="black" />
               </svg>
               <ul className="list-disc pl-6 text-lg">
                 {medEligibility[medicationKey].when.map((item, index) => (
-                  <li key={index} className="leading-5">
+                  <li key={index} className="md:leading-5">
                     {item}
                   </li>
                 ))}
@@ -118,21 +120,23 @@ export function MedicationEligibility({
             </section>
 
             <section className="relative">
-              <h2 className="mb-1 text-2xl font-semibold">Precautions</h2>{" "}
+              <h2 className="mb-3 text-center text-xl font-semibold md:mb-1 md:text-left md:text-2xl">
+                Precautions
+              </h2>{" "}
               <svg
                 width="12"
                 height="12"
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute top-2 -left-8.75"
+                className="absolute top-2 -left-8.75 hidden md:block"
               >
                 <circle cx="6" cy="6" r="6" fill="black" />
               </svg>
               <ul className="list-disc pl-6 text-lg">
                 {medEligibility[medicationKey].precautions.map(
                   (item, index) => (
-                    <li key={index} className="leading-5">
+                    <li key={index} className="md:leading-5">
                       {item}
                     </li>
                   ),
@@ -144,7 +148,7 @@ export function MedicationEligibility({
             </section>
 
             <section className="relative">
-              <h2 className="mb-1 text-2xl font-semibold">
+              <h2 className="mb-3 text-center text-xl font-semibold md:mb-1 md:text-left md:text-2xl">
                 Special considerations
               </h2>{" "}
               <svg
@@ -153,14 +157,14 @@ export function MedicationEligibility({
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute top-2 -left-8.75"
+                className="absolute top-2 -left-8.75 hidden md:block"
               >
                 <circle cx="6" cy="6" r="6" fill="black" />
               </svg>
               <ul className="list-disc pl-6 text-lg">
                 {medEligibility[medicationKey].specialConsiderations.map(
                   (item, index) => (
-                    <li key={index} className="leading-5">
+                    <li key={index} className="md:leading-5">
                       {item}
                     </li>
                   ),
@@ -170,7 +174,7 @@ export function MedicationEligibility({
           </div>
         </main>
 
-        <footer className="mt-auto text-sm leading-5 text-gray-700">
+        <footer className="mt-auto pt-4 text-sm text-gray-700 md:leading-5">
           <section aria-labelledby="indication-heading">
             <h2 id="indication-heading" className="sr-only">
               Indication

@@ -24,18 +24,22 @@ export function RiskAssessmentOutcome() {
   const outcome = outcomes[0];
   return (
     <PageLayout title="Risk Assessment Outcome">
-      <div className="mr-16 flex items-center justify-center pt-24">
+      <div className="flex items-center justify-center md:mr-16 md:pt-24">
         <main className="max-w-2xl">
-          <div className="flex flex-col items-center p-8">
-            <h2 className="mb-3 text-center text-3xl font-bold">
+          <div className="flex flex-col items-center px-8">
+            <h2 className="mb-3 text-center text-xl font-bold sm:text-2xl md:text-3xl">
               {outcome.title}
             </h2>
-            <div className="flex w-full flex-col items-center justify-center border border-black p-8">
-              <p className="text-center text-2xl">
-                <strong>{outcome.description}</strong>
-              </p>
-              <p className="mb-16 text-center text-xl">{outcome.note}</p>
-              <Button className="mb-8 bg-transparent text-center text-2xl whitespace-normal text-gray-900 italic hover:cursor-pointer hover:bg-inherit hover:underline">
+            <div className="flex w-full flex-col items-center justify-center gap-8 border border-black p-4 md:p-8">
+              <div>
+                <p className="text-center text-lg sm:text-xl md:text-2xl">
+                  <span className="font-semibold">{outcome.description}</span>
+                </p>
+                <p className="text-center text-base sm:text-lg md:text-xl">
+                  {outcome.note}
+                </p>
+              </div>
+              <Button className="h-full bg-transparent text-center text-lg whitespace-normal text-gray-900 italic hover:cursor-pointer hover:bg-inherit hover:underline sm:text-xl md:text-2xl">
                 {outcome.action}
               </Button>
             </div>

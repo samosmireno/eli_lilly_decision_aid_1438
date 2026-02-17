@@ -7,18 +7,26 @@ import {
   PopoverTitle,
 } from "@/components/ui/popover";
 import { PageLayout } from "../components/page-layout";
+import { useState } from "react";
 
 export function CharacteristicsElevatedRisk() {
+  const [openSection, setOpenSection] = useState<"monarche" | "natalee" | null>(
+    null,
+  );
+
+  const toggleSection = (section: "monarche" | "natalee") => {
+    setOpenSection(openSection === section ? null : section);
+  };
   return (
     <PageLayout title="Characteristics of Patients who have Elevated Risk of Recurrence">
-      <div className="mt-4 mr-16 flex min-h-[calc(100vh-136px)] flex-col">
-        <main className="space-y-8">
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold">
+      <div className="flex min-h-[calc(100vh-136px)] flex-col md:mr-16 lg:mt-4">
+        <main className="space-y-4 md:space-y-8">
+          <section className="space-y-4 md:space-y-6">
+            <h2 className="text-center text-xl font-bold md:text-left md:text-2xl">
               How was higher risk defined in these studies?
             </h2>
 
-            <ul className="list-disc text-2xl">
+            <ul className="list-disc text-base sm:text-xl md:text-2xl">
               <li className="ml-6">
                 Researchers from two major studies, monarchE (abemaciclib) and
                 NATALEE (ribociclib), identified which patients face this higher
@@ -26,15 +34,15 @@ export function CharacteristicsElevatedRisk() {
               </li>
             </ul>
           </section>
-          <div className="flex items-center">
-            <div className="flex items-center gap-16">
+          <div className="flex items-center justify-center md:justify-start">
+            <div className="flex w-full flex-col items-center gap-4 md:flex-row md:gap-16">
               <img
                 src="/elevated-risk-diagram.png"
                 alt="Diagram of elevated risk criteria"
-                className="h-96 w-96 border border-gray-900"
+                className="h-96 w-full border border-gray-900 md:w-96"
               />
 
-              <div className="flex flex-col gap-50">
+              <div className="hidden flex-col gap-50 md:flex">
                 <Popover>
                   <div className="flex items-center gap-3">
                     <span className="text-2xl font-semibold">MonarchE+</span>
@@ -95,12 +103,16 @@ export function CharacteristicsElevatedRisk() {
                       </PopoverTitle>
                       <ul className="list-disc text-lg">
                         <li className="ml-6">
-                          <strong>Stage III</strong> or{" "}
-                          <strong>Stage IIB</strong> breast cancer, or
+                          <span className="font-semibold">Stage III</span> or{" "}
+                          <span className="font-semibold">Stage IIB</span>{" "}
+                          breast cancer, or
                         </li>
                         <li className="ml-6">
-                          <strong>Stage IIA</strong> disease{" "}
-                          <strong>with any of these:</strong>
+                          <span className="font-semibold">Stage IIA</span>{" "}
+                          disease{" "}
+                          <span className="font-semibold">
+                            with any of these:
+                          </span>
                           <ul className="ml-6 list-disc text-lg">
                             <li className="ml-6">
                               Lymph-node involvement (N1), meaning that the
@@ -108,9 +120,13 @@ export function CharacteristicsElevatedRisk() {
                               node(s)
                             </li>
                             <li className="ml-6">
-                              No node involvement but <strong>Grade 3</strong>,{" "}
-                              <strong>Ki-67 ≥ 20%</strong>, or a{" "}
-                              <strong>high-risk genomic test result</strong>{" "}
+                              No node involvement but{" "}
+                              <span className="font-semibold">Grade 3</span>,{" "}
+                              <span className="font-semibold">Ki-67 ≥ 20%</span>
+                              , or a{" "}
+                              <span className="font-semibold">
+                                high-risk genomic test result
+                              </span>{" "}
                               (e.g., Oncotype DX or MammaPrint)
                             </li>
                           </ul>
@@ -120,10 +136,94 @@ export function CharacteristicsElevatedRisk() {
                   </PopoverContent>
                 </Popover>
               </div>
+
+              <div className="flex w-full flex-col gap-4 md:hidden">
+                <div className="w-full">
+                  <Button
+                    onClick={() => toggleSection("monarche")}
+                    className="w-full rounded-none border border-gray-900 bg-white text-xl font-semibold text-gray-900 hover:cursor-pointer hover:bg-gray-100"
+                  >
+                    MonarchE+
+                  </Button>
+                  {openSection === "monarche" && (
+                    <div className="border-x border-b border-gray-900 px-2 pt-4 pb-2">
+                      <p>
+                        This study looked at people whose cancer had spread to
+                        nearby lymph nodes. The risk was higher if they had:
+                      </p>
+                      <ul className="list-disc font-semibold">
+                        <li className="ml-6">
+                          4 or more positive lymph nodes, or
+                        </li>
+                        <li className="ml-6">
+                          1-3 lymph nodes plus at least one of these features:
+                          <ul className="ml-6 list-disc">
+                            <li className="ml-6">A large tumour (≥ 5 cm)</li>
+                            <li className="ml-6">
+                              A high tumour grade (Grade 3) - meaning
+                              faster-growing cells
+                            </li>
+                            <li className="ml-6">
+                              A Ki-67 score ≥ 20%, showing many cancer cells
+                              dividing
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+                <div className="w-full">
+                  <Button
+                    onClick={() => toggleSection("natalee")}
+                    className="w-full rounded-none border border-gray-900 bg-white text-xl font-semibold text-gray-900 hover:cursor-pointer hover:bg-gray-100"
+                  >
+                    NATALEE+
+                  </Button>
+                  {openSection === "natalee" && (
+                    <div className="border-x border-b border-gray-900 px-2 pt-4 pb-2">
+                      <p>
+                        This study considered patients higher-risk if they had:
+                      </p>
+                      <ul className="list-disc">
+                        <li className="ml-6">
+                          <span className="font-semibold">Stage III</span> or{" "}
+                          <span className="font-semibold">Stage IIB</span>{" "}
+                          breast cancer, or
+                        </li>
+                        <li className="ml-6">
+                          <span className="font-semibold">Stage IIA</span>{" "}
+                          disease{" "}
+                          <span className="font-semibold">
+                            with any of these:
+                          </span>
+                          <ul className="ml-6 list-disc">
+                            <li className="ml-6">
+                              Lymph-node involvement (N1), meaning that the
+                              cancer had spread to one or a few nearby lymph
+                              node(s)
+                            </li>
+                            <li className="ml-6">
+                              No node involvement but{" "}
+                              <span className="font-semibold">Grade 3</span>,{" "}
+                              <span className="font-semibold">Ki-67 ≥ 20%</span>
+                              , or a{" "}
+                              <span className="font-semibold">
+                                high-risk genomic test result
+                              </span>{" "}
+                              (e.g., Oncotype DX or MammaPrint)
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </main>
-        <footer className="mt-auto text-sm leading-5 text-gray-700">
+        <footer className="mt-auto pt-4 text-sm leading-5 text-gray-700">
           <p>
             <span className="sr-only">Reference: </span>
             Cucciniello L, et al. Cancer Treat Rev. 2023;120:102624.

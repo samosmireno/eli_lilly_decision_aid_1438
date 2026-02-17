@@ -4,9 +4,9 @@ import { PageLayout } from "../components/page-layout";
 export function BaselineRiskRecurrence() {
   return (
     <PageLayout title="Baseline Risk of Recurrence with Endocrine Treatment">
-      <div className="mt-4 mr-16 space-y-12">
+      <div className="md:mr-16 lg:mt-4">
         <main>
-          <ul className="list-disc space-y-6 text-2xl">
+          <ul className="list-disc text-base sm:text-lg md:space-y-6 md:text-2xl">
             <li className="ml-6">
               Most patients with lower-risk HR+ early breast cancer have
               excellent outcomes with endocrine therapy alone.
@@ -34,14 +34,14 @@ export function BaselineRiskRecurrence() {
             </li>
           </ul>
 
-          <section className="mt-12 flex flex-row items-center justify-end gap-4">
+          <section className="mt-4 flex flex-row-reverse items-center justify-end gap-4 pr-3 pl-8 md:mt-12 md:flex-row md:pr-0 md:pl-0">
             <Button
               onClick={() => {}}
-              className="h-16 w-16 rounded-full border border-gray-900 bg-white text-gray-900 hover:cursor-pointer hover:bg-gray-100"
+              className="h-12 w-12 rounded-full border border-gray-900 bg-white text-gray-900 hover:cursor-pointer hover:bg-gray-100 md:h-16 md:w-16"
             >
               +
             </Button>
-            <p className="text-xl font-semibold">
+            <p className="text-base font-semibold sm:text-lg md:text-xl">
               Personalized Risk Discussion with your doctor
             </p>
           </section>

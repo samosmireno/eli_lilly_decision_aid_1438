@@ -3,22 +3,25 @@ import { PageLayout } from "../components/page-layout";
 export function BrcaMutationStatus() {
   return (
     <PageLayout title="BRCA1/2 Mutation Status">
-      <div className="mt-4 mr-16 flex min-h-[calc(100vh-136px)] flex-col">
-        <main className="flex flex-row gap-4">
-          <div className="space-y-3 p-4">
+      <div className="flex min-h-[calc(100vh-136px)] flex-col sm:mr-16 lg:mt-4">
+        <main className="mb-4 flex flex-col gap-4 lg:mb-0 lg:flex-row">
+          <div className="space-y-3 px-4">
             <section>
-              <p className="text-2xl">
+              <p className="text-center sm:text-xl md:text-2xl lg:text-left">
                 Some people with early breast cancer carry an inherited BRCA1 or
                 BRCA2 mutation, which may influence treatment discussions in the
                 adjuvant setting.
               </p>
             </section>
 
-            <section aria-labelledby="why-matters">
-              <h2 id="why-matters" className="mb-5 text-xl font-bold">
+            <section
+              aria-labelledby="why-matters"
+              className="sm:text-lg md:text-xl"
+            >
+              <h2 id="why-matters" className="mb-4 font-bold lg:mb-5">
                 Why this matters
               </h2>
-              <ul className="list-disc text-xl">
+              <ul className="list-disc">
                 <li className="ml-6">
                   BRCA1/2 status does not determine eligibility for CDK4/6
                   inhibitors.
@@ -41,11 +44,14 @@ export function BrcaMutationStatus() {
               </ul>
             </section>
 
-            <section aria-labelledby="talk-to-team">
-              <h2 id="talk-to-team" className="mb-5 text-xl font-bold">
+            <section
+              aria-labelledby="talk-to-team"
+              className="sm:text-lg md:text-xl"
+            >
+              <h2 id="talk-to-team" className="mb-4 font-semibold lg:mb-5">
                 Talk to your care team
               </h2>
-              <ul className="list-disc text-xl">
+              <ul className="list-disc">
                 <li className="ml-6">
                   How your BRCA1/2 status fits into your overall treatment plan
                 </li>
@@ -63,7 +69,7 @@ export function BrcaMutationStatus() {
           />
         </main>
 
-        <footer className="mt-auto text-sm leading-5 text-gray-700">
+        <footer className="mt-auto pt-4 text-sm leading-5 text-gray-700">
           <section aria-labelledby="footnotes-heading">
             <h2 id="footnotes-heading" className="sr-only">
               Footnotes

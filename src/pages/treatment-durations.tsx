@@ -18,7 +18,7 @@ const footnotes = [
 export default function TreatmentDurations() {
   return (
     <PageLayout title="Treatment Durations">
-      <div className="mt-5 flex min-h-[calc(100vh-140px)] flex-col">
+      <div className="flex min-h-[calc(100vh-140px)] flex-col lg:mt-5">
         <main>
           <img
             src="/placeholder-image.jpg"
@@ -26,7 +26,7 @@ export default function TreatmentDurations() {
             className="h-120 w-full border border-gray-900"
           />
         </main>
-        <footer className="mt-auto text-sm leading-5 text-gray-700">
+        <footer className="mt-auto pt-4 text-sm leading-5 text-gray-700">
           <section aria-labelledby="footnotes-heading">
             <h2 id="footnotes-heading" className="sr-only">
               Footnotes

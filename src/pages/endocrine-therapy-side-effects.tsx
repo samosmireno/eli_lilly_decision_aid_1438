@@ -3,10 +3,13 @@ import { PageLayout } from "../components/page-layout";
 export function EndocrineTherapySideEffects() {
   return (
     <PageLayout title="Endocrine Therapy: Side Effects and Why Consistency Matters">
-      <div className="mt-12 mr-16 flex min-h-[calc(100vh-168px)] flex-col">
-        <main className="space-y-4">
+      <div className="flex min-h-[calc(100vh-168px)] flex-col md:mr-16 lg:mt-12">
+        <main className="space-y-4 text-center sm:text-left">
           <section aria-labelledby="side-effects">
-            <h2 id="side-effects" className="mb-6 text-2xl font-bold">
+            <h2
+              id="side-effects"
+              className="mb-4 text-xl font-semibold md:mb-6 md:text-2xl"
+            >
               Endocrine therapy-related side effects
               <sup>
                 <a id="ref1-back" href="#ref1">
@@ -22,10 +25,13 @@ export function EndocrineTherapySideEffects() {
           </section>
 
           <section aria-labelledby="adherence">
-            <h2 id="adherence" className="mb-3 text-2xl font-bold">
+            <h2
+              id="adherence"
+              className="mb-3 text-xl font-semibold md:text-2xl"
+            >
               Why adherence is important?
             </h2>
-            <p className="text-2xl leading-relaxed">
+            <p className="text-base leading-relaxed sm:text-xl md:text-2xl">
               Endocrine therapy works best when it is taken consistently and for
               the recommended duration. Studies show that staying on treatment
               as prescribed is associated with a lower risk of breast cancer
@@ -40,18 +46,18 @@ export function EndocrineTherapySideEffects() {
                 <a href="#ref3" id="ref3-back">
                   <span className="sr-only">Reference </span>3
                 </a>
-              </sup>
+              </sup>{" "}
               Managing side effects early and discussing challenges with your
               care team can help you stay on therapy and get the full benefit.
             </p>
           </section>
         </main>
-        <footer className="mt-auto text-sm leading-5 whitespace-pre-line text-gray-700">
+        <footer className="mt-auto pt-4 text-sm leading-5 whitespace-pre-line text-gray-700">
           <section aria-labelledby="references-heading">
             <h2 id="references-heading" className="sr-only">
               References
             </h2>
-            <ol className="flex flex-wrap gap-2 text-sm text-gray-700">
+            <ol className="flex flex-wrap text-sm text-gray-700">
               <li id="ref1" tabIndex={-1}>
                 <a href="#ref1-back">
                   <span className="sr-only">Back to reference </span>1.

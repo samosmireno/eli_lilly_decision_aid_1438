@@ -265,7 +265,7 @@ export function MedicationCareJourney({
               {data.steps.map((step, index) => (
                 <div
                   key={index}
-                  className="h-96 w-60 flex-1 border border-black bg-white p-2"
+                  className="min-h-96 w-60 flex-1 border border-black bg-white p-2"
                 >
                   <ul className="space-y-1">
                     {step.content.map((item, itemIndex) => (
