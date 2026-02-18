@@ -113,23 +113,25 @@ export function MedicationSideEffects({
 
   return (
     <PageLayout title={data.title}>
-      <div className="mr-16 flex min-h-[calc(100vh-120px)] flex-col space-y-3">
+      <div className="flex min-h-[calc(100vh-120px)] flex-col md:mr-16">
         <main>
-          <h2 className="text-2xl font-semibold">{data.subtitle}</h2>
+          <h2 className="mb-4 text-center text-xl font-semibold md:text-left md:text-2xl">
+            {data.subtitle}
+          </h2>
 
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-col gap-4 lg:flex-row">
             <img
               src={data.image.src}
               alt={data.image.alt}
-              className="h-96 w-60 border border-black"
+              className="hidden h-96 w-60 border border-black lg:block"
             />
 
             {/* Middle: Side effects list */}
-            <div className="flex-1 space-y-2 p-4">
+            <div className="flex-1 space-y-2 px-4 lg:py-4">
               {data.sideEffects.map((effect, index) => (
-                <div key={index}>
-                  <h3 className="text-lg font-semibold">{effect.category}</h3>
-                  <ul className="list-disc pl-6 text-lg leading-5">
+                <div key={index} className="text-base sm:text-lg">
+                  <h3 className="font-semibold">{effect.category}</h3>
+                  <ul className="list-disc pl-6 leading-5">
                     {effect.items.map((item, itemIndex) => (
                       <li key={itemIndex}>{item}</li>
                     ))}
@@ -138,33 +140,35 @@ export function MedicationSideEffects({
               ))}
             </div>
             <div className="flex flex-1 flex-col gap-2">
-              <div className="flex flex-col gap-2 border border-gray-900 p-4">
+              <div className="flex flex-col gap-4 border-gray-900 px-4 lg:gap-2 lg:border lg:py-4">
                 <div>
-                  <h3 className="mb-2 text-xl leading-6 font-semibold">
+                  <h3 className="mb-4 border border-gray-900 p-4 text-center text-xl leading-6 font-semibold lg:mb-2 lg:border-none lg:p-0 lg:text-left">
                     <span className="text-xl">⚠</span> Important symptoms - seek
                     medical care right away
                   </h3>
-                  <ul className="list-disc border border-gray-900 p-2 pl-6 text-lg leading-5">
+                  <ul className="list-disc border border-gray-900 p-2 pl-6 text-base leading-5 sm:text-lg">
                     {data.importantSymptoms.map((symptom, index) => (
                       <li key={index}>{symptom}</li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="border border-gray-900 p-2">
-                  <p className="text-lg leading-5 font-semibold">
+                <div className="border-gray-900 px-2 lg:border lg:py-2">
+                  <p className="text-center text-base leading-5 font-semibold sm:text-lg md:text-left">
                     Do not wait for your next oncology visit. Contact your
                     clinic or go to the ER.
                   </p>
                 </div>
               </div>
-              <div className="border border-gray-900 p-4">
-                <p className="text-lg leading-5">{data.bottomMessage}</p>
+              <div className="border-gray-900 p-4 lg:border">
+                <p className="text-center text-base leading-5 sm:text-lg lg:text-left">
+                  {data.bottomMessage}
+                </p>
               </div>
             </div>
           </div>
         </main>
-        <footer className="mt-auto text-sm leading-5 text-gray-700">
+        <footer className="mt-auto pt-4 text-sm leading-5 text-gray-700">
           <section aria-labelledby="abbreviations-heading">
             <h2 id="abbreviations-heading" className="sr-only">
               Abbreviations

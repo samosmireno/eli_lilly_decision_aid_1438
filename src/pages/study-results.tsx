@@ -3,7 +3,7 @@ import { PageLayout } from "../components/page-layout";
 const studyResults = {
   abemaciclib: {
     medication: "abemaciclib (Verzenio)",
-    study: "monarchE",
+    study: "MonarchE",
     who: "People with HR-positive, HER2-negative, node-positive early breast cancer at higher risk of recurrence",
     followUp: "7",
     resultsPercentage: ["26.6%", "25.4%"],
@@ -58,12 +58,12 @@ export function StudyResults({ medicationKey, part }: StudyResultsProps) {
     <PageLayout
       title={`How ${study.medication} helped people stay cancer-free in the ${study.study} study`}
     >
-      <div className="mr-16 flex min-h-[calc(100vh-120px)] flex-col space-y-4">
+      <div className="flex min-h-[calc(100vh-120px)] flex-col space-y-4 md:mr-16">
         <main className="space-y-4">
           <section aria-labelledby="study-summary" className="relative">
             <h2
               id="study-summary"
-              className="mb-3 border-b-2 border-gray-900 pb-2 pl-5 text-2xl font-semibold"
+              className="border-gray-900 pb-2 text-center text-xl font-semibold md:mb-3 md:border-b-2 md:pl-5 md:text-left md:text-2xl"
             >
               {study.study} Study Summary:
             </h2>
@@ -73,11 +73,11 @@ export function StudyResults({ medicationKey, part }: StudyResultsProps) {
               viewBox="0 0 12 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute top-8.5 left-0"
+              className="absolute top-8.5 left-0 hidden md:block"
             >
               <circle cx="6" cy="6" r="6" fill="black" />
             </svg>
-            <ul className="list-disc pl-11 text-lg">
+            <ul className="list-disc pl-6 text-base sm:text-lg md:pl-11">
               <li>
                 <span className="font-semibold">Who was studied:</span> People
                 with HR-positive, HER2-negative, node-positive early breast
@@ -90,11 +90,14 @@ export function StudyResults({ medicationKey, part }: StudyResultsProps) {
             </ul>
           </section>
 
-          <section aria-labelledby="staying-cancer-free" className="pl-5">
-            <h2 id="staying-cancer-free" className="mb-2 text-xl font-semibold">
+          <section aria-labelledby="staying-cancer-free" className="md:pl-5">
+            <h2
+              id="staying-cancer-free"
+              className="mb-2 text-center text-xl font-semibold md:mb-3 md:text-left md:text-2xl"
+            >
               Staying Cancer-Free
             </h2>
-            <ul className="mb-14 list-disc pl-6 text-lg">
+            <ul className="mb-4 list-disc pl-6 text-base sm:text-lg md:mb-14">
               <li>
                 Invasive Disease-Free Survival (IDFS) = how long people lived
                 without the cancer coming back or a new cancer starting.
@@ -105,9 +108,9 @@ export function StudyResults({ medicationKey, part }: StudyResultsProps) {
               </li>
             </ul>
 
-            <div className="mb-6 flex w-full justify-center">
+            <div className="flex w-full justify-center">
               <div className="max-w-3xl border border-gray-900 p-4">
-                <ul className="list-disc pl-6 text-lg">
+                <ul className="list-disc pl-6 text-base sm:text-lg">
                   <li>
                     <span className="font-semibold">
                       {study.resultsPercentage[part - 1]}
@@ -119,7 +122,7 @@ export function StudyResults({ medicationKey, part }: StudyResultsProps) {
             </div>
           </section>
         </main>
-        <footer className="mt-auto text-sm leading-5 text-gray-700">
+        <footer className="mt-auto pt-4 text-sm leading-5 text-gray-700">
           <section aria-labelledby="study-details-heading">
             <h2 id="study-details-heading" className="sr-only">
               Study Details

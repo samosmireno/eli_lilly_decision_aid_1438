@@ -235,11 +235,13 @@ export function MedicationCareJourney({
 
   return (
     <PageLayout title={data.title}>
-      <div className="flex min-h-[calc(100vh-120px)] flex-col">
+      <div className="flex min-h-[calc(100vh-120px)] flex-col md:mr-16">
         <main className="flex-1">
-          <h2 className="mb-3 text-xl font-bold">{data.medicationName}</h2>
+          <h2 className="mb-3 text-center text-xl font-semibold lg:text-left">
+            {data.medicationName}
+          </h2>
           <div className="mb-4">
-            <div className="relative mb-0 flex items-center gap-2">
+            <div className="relative mb-0 hidden items-center gap-2 lg:flex">
               {data.steps.map((step, index) => (
                 <div key={index} className="relative flex-1">
                   <div
@@ -261,12 +263,15 @@ export function MedicationCareJourney({
                 </div>
               ))}
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-4 lg:flex-row lg:gap-2">
               {data.steps.map((step, index) => (
                 <div
                   key={index}
-                  className="min-h-96 w-60 flex-1 border border-black bg-white p-2"
+                  className="w-full flex-1 border-black bg-white lg:min-h-96 lg:w-60 lg:border lg:p-2"
                 >
+                  <div className="mb-4 text-xl font-semibold lg:hidden">
+                    {step.title}
+                  </div>
                   <ul className="space-y-1">
                     {step.content.map((item, itemIndex) => (
                       <li
@@ -287,11 +292,11 @@ export function MedicationCareJourney({
               ))}
             </div>
           </div>
-          <div className="mb-6 text-center">
+          <div className="text-center">
             <p className="text-xl font-semibold">{data.disclaimer}</p>
           </div>
         </main>
-        <footer className="mt-auto text-sm text-gray-700">
+        <footer className="mt-auto pt-4 text-sm text-gray-700">
           <section aria-labelledby="abbreviations-heading">
             <h2 id="abbreviations-heading" className="sr-only">
               Abbreviations

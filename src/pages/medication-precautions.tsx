@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { PageLayout } from "../components/page-layout";
+import { useState } from "react";
 
 const medPrecautions = {
   abemaciclib: {
@@ -59,17 +61,22 @@ interface MedicationPrecautionsProps {
 export function MedicationPrecautions({
   medicationKey,
 }: MedicationPrecautionsProps) {
+  const [showExamples, setShowExamples] = useState(false);
+
   return (
     <PageLayout
       title={`Other medicines and foods to be careful with while taking ${medPrecautions[medicationKey].medication}`}
     >
-      <div className="mr-16 flex min-h-[calc(100vh-120px)] flex-col">
+      <div className="flex min-h-[calc(100vh-120px)] flex-col md:mr-16">
         <main className="space-y-4">
           <section aria-labelledby="care-team" className="relative">
-            <h2 id="care-team" className="mb-3 text-2xl font-semibold">
+            <h2
+              id="care-team"
+              className="mb-3 text-center text-xl font-semibold md:text-left md:text-2xl"
+            >
               Tell your care team about everything you take
             </h2>
-            <ul className="list-disc pl-6 text-lg">
+            <ul className="list-disc pl-6 text-base sm:text-lg">
               <li>
                 Always share a list of all medicines, supplements, or herbal
                 products you use, even vitamins or things bought without a
@@ -82,21 +89,21 @@ export function MedicationPrecautions({
               <li>Bring your medication list to every visit</li>
             </ul>
           </section>
-          <div className="flex flex-row gap-4 border-t-2 border-gray-900 pt-4">
+          <div className="flex flex-col gap-4 border-gray-900 pt-4 md:flex-row md:border-t-2">
             <section
               aria-labelledby="medicine-interactions"
               className="relative w-full max-w-3xl"
             >
-              <div className="mb-4 flex items-start gap-3">
+              <div className="flex items-start gap-3">
                 <img
                   src=" /interactions.png"
                   alt="Medicine interactions"
-                  className="h-12 w-16 border border-gray-900"
+                  className="hidden h-12 w-16 border border-gray-900 lg:block"
                 />
                 <div>
                   <h2
                     id="medicine-interactions"
-                    className="mb-3 text-2xl font-semibold"
+                    className="mb-3 text-center text-xl font-semibold md:text-left md:text-2xl"
                   >
                     Some medicines can affect how {medicationKey} works
                   </h2>
@@ -106,28 +113,49 @@ export function MedicationPrecautions({
                     viewBox="0 0 12 12"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="absolute -top-6 left-0"
+                    className="absolute -top-6 left-0 hidden md:block"
                   >
                     <circle cx="6" cy="6" r="6" fill="black" />
                   </svg>
-                  <ul className="list-disc pl-6 text-lg">
+                  <ul className="mb-4 list-disc pl-6 text-base sm:text-lg">
                     {medPrecautions[medicationKey].effects.map(
                       (effect, index) => (
                         <li key={index}>{effect}</li>
                       ),
                     )}
-                    <li>Examples include: +</li>
                   </ul>
+                  <div className="hidden flex-col gap-2 md:flex">
+                    <p className="text-base sm:text-lg">Examples include: +</p>
+                    <div className="border border-gray-900 bg-white p-2 md:p-4">
+                      <ul className="list-disc pl-6 text-base sm:text-lg">
+                        {medPrecautions[medicationKey].examples.map(
+                          (example, index) => (
+                            <li key={index}>{example}</li>
+                          ),
+                        )}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="md:hidden">
+                    <Button
+                      onClick={() => setShowExamples(!showExamples)}
+                      className="flex w-full rounded-none border border-gray-900 bg-white text-xl font-semibold text-gray-900 hover:cursor-pointer hover:bg-gray-300 md:hidden"
+                    >
+                      Examples include +
+                    </Button>
+                    {showExamples && (
+                      <div className="border border-gray-900 bg-white p-2 md:p-4">
+                        <ul className="list-disc pl-6 text-base sm:text-lg">
+                          {medPrecautions[medicationKey].examples.map(
+                            (example, index) => (
+                              <li key={index}>{example}</li>
+                            ),
+                          )}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-              <div className="border border-gray-900 bg-white p-4">
-                <ul className="list-disc pl-6 text-lg">
-                  {medPrecautions[medicationKey].examples.map(
-                    (example, index) => (
-                      <li key={index}>{example}</li>
-                    ),
-                  )}
-                </ul>
               </div>
             </section>
 
@@ -136,10 +164,13 @@ export function MedicationPrecautions({
                 <img
                   src=" /interactions.png"
                   alt="Medicine interactions"
-                  className="h-12 w-16 border border-gray-900"
+                  className="hidden h-12 w-16 border border-gray-900 lg:block"
                 />
                 <div>
-                  <h2 id="foods-to-avoid" className="text-2xl font-bold">
+                  <h2
+                    id="foods-to-avoid"
+                    className="mb-3 text-center text-xl font-semibold md:text-left md:text-2xl"
+                  >
                     Foods to avoid
                   </h2>
                   <svg
@@ -148,11 +179,11 @@ export function MedicationPrecautions({
                     viewBox="0 0 12 12"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="absolute -top-6 left-0"
+                    className="absolute -top-6 left-0 hidden md:block"
                   >
                     <circle cx="6" cy="6" r="6" fill="black" />
                   </svg>
-                  <ul className="list-disc pl-6 text-lg">
+                  <ul className="list-disc pl-6 text-base sm:text-lg">
                     <li>
                       Avoid grapefruit and grapefruit juice (and foods
                       containing grapefruit).
@@ -164,7 +195,7 @@ export function MedicationPrecautions({
             </section>
           </div>
         </main>
-        <footer className="mt-auto text-sm leading-5 text-gray-700">
+        <footer className="mt-auto pt-4 text-sm leading-5 text-gray-700">
           <section aria-labelledby="disclaimer-heading">
             <h2 id="disclaimer-heading" className="sr-only">
               Important Notice

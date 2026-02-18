@@ -108,11 +108,11 @@ export function MedicationQualityOfLife({
 
   return (
     <PageLayout title={data.title}>
-      <div className="flex min-h-[calc(100vh-120px)] flex-col">
+      <div className="flex min-h-[calc(100vh-120px)] flex-col md:mr-16">
         <main className="flex-1">
           <section className="mb-4">
             <div className="relative">
-              <h2 className="mb-3 border-b-2 border-gray-900 pb-2 pl-5 text-2xl font-semibold">
+              <h2 className="border-gray-900 pb-2 text-center text-xl font-semibold md:mb-3 md:border-b-2 md:pl-5 md:text-left md:text-2xl">
                 {data.studyName.toUpperCase()} Study Summary:
               </h2>
               <svg
@@ -121,11 +121,11 @@ export function MedicationQualityOfLife({
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute top-8.5 left-0"
+                className="absolute top-8.5 left-0 hidden md:block"
               >
                 <circle cx="6" cy="6" r="6" fill="black" />
               </svg>
-              <ul className="list-disc pl-6 text-lg leading-5">
+              <ul className="list-disc pl-6 text-base sm:text-lg md:leading-5">
                 <li>
                   <span className="font-semibold">Who was studied:</span>{" "}
                   {data.studySummary.whoStudied}
@@ -137,22 +137,24 @@ export function MedicationQualityOfLife({
               </ul>
             </div>
           </section>
-          <section className="mb-10 pl-5">
-            <h2 className="mb-3 text-xl font-semibold">
+          <section className="mb-4 md:mb-10 md:pl-5">
+            <h2 className="mb-3 text-center text-xl font-semibold md:text-left">
               Quality of Life and Tolerability
             </h2>
 
             {data.qualityOfLifeIntro && (
-              <p className="mb-3 text-lg">{data.qualityOfLifeIntro}</p>
+              <p className="mb-3 text-center text-base sm:text-lg md:text-left">
+                {data.qualityOfLifeIntro}
+              </p>
             )}
 
             <div className="space-y-2">
-              <h3 className="pl-6 text-xl font-semibold">
+              <h3 className="text-xl font-semibold md:pl-6">
                 {medicationKey === "ribociclib"
                   ? "Results (5-year analysis):"
                   : "Results:"}
               </h3>
-              <ul className="list-disc pl-12 text-lg leading-5 font-semibold">
+              <ul className="list-disc pl-6 text-base font-semibold sm:text-lg md:pl-12 md:leading-5">
                 {data.results.map((result, index) => (
                   <li key={index}>
                     {result.text}{" "}
@@ -164,15 +166,15 @@ export function MedicationQualityOfLife({
               </ul>
             </div>
           </section>
-          <div className="mb-6 flex items-center justify-center">
+          <div className="flex items-center justify-center">
             <div className="border border-black p-4">
-              <p className="text-center text-xl font-semibold">
+              <p className="text-center text-base font-semibold sm:text-lg md:text-xl">
                 {data.summaryBox}
               </p>
             </div>
           </div>
         </main>
-        <footer className="mt-auto text-sm text-gray-700">
+        <footer className="mt-auto pt-4 text-sm text-gray-700">
           <section aria-labelledby="study-design-heading">
             <h2 id="study-design-heading" className="sr-only">
               Study Design
