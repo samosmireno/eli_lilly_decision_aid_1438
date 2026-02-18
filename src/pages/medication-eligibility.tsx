@@ -142,7 +142,7 @@ export function MedicationEligibility({
                   ),
                 )}
               </ul>
-              <p className="mt-2 text-lg italic">
+              <p className="mt-2 text-center text-lg italic md:text-left">
                 ⚠️ Do not wait for your next oncology visit.
               </p>
             </section>

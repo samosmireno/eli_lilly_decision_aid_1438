@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
+import { PatientCharacteristicsInput } from "./pages/patient-characteristics-input";
 import { EndocrineTherapyPros } from "./pages/endocrine-therapy-pros";
 import { EndocrineTherapySideEffects } from "./pages/endocrine-therapy-side-effects";
 import { BrcaMutationStatus } from "./pages/brca-mutation-status";
@@ -48,7 +49,11 @@ function App() {
         Skip to main content
       </a>
       <Routes>
-        <Route path="/" element={<EndocrineTherapyPros />} />
+        <Route path="/" element={<PatientCharacteristicsInput />} />
+        <Route
+          path="/patient-characteristics-input"
+          element={<PatientCharacteristicsInput />}
+        />
         <Route
           path="/endocrine-therapy-pros"
           element={<EndocrineTherapyPros />}
@@ -145,7 +150,7 @@ function App() {
           path="/ribociclib-care-journey"
           element={<MedicationCareJourney medicationKey="ribociclib" />}
         />
-        <Route path="*" element={<EndocrineTherapyPros />} />
+        <Route path="*" element={<PatientCharacteristicsInput />} />
       </Routes>
     </>
   );

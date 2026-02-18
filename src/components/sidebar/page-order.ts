@@ -1,5 +1,6 @@
 // Define your page navigation order here
 export const pageOrder = [
+  "/patient-characteristics-input",
   "/brca-mutation-status",
   "/endocrine-therapy-benefits",
   "/baseline-risk-recurrence",
