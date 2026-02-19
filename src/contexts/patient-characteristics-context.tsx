@@ -50,7 +50,6 @@ interface PatientCharacteristics {
   nodalInvolvement: NodalInvolvement;
   ki67Marker: Ki67Marker;
   brcaVariant: boolean;
-  viewStageClassification: boolean;
 }
 
 interface PatientCharacteristicsContextType extends PatientCharacteristics {
@@ -65,7 +64,6 @@ interface PatientCharacteristicsContextType extends PatientCharacteristics {
   setNodalInvolvement: (value: NodalInvolvement) => void;
   setKi67Marker: (value: Ki67Marker) => void;
   setBrcaVariant: (value: boolean) => void;
-  setViewStageClassification: (value: boolean) => void;
   // Computed values
   stage: Stage;
   medicationEligibility: MedicationEligibility;
@@ -145,8 +143,6 @@ export function PatientCharacteristicsProvider({
   const [brcaVariant, setBrcaVariant] = useState<boolean>(() =>
     loadFromStorage("brcaVariant", false),
   );
-  const [viewStageClassification, setViewStageClassification] =
-    useState<boolean>(() => loadFromStorage("viewStageClassification", false));
 
   // Persist timingOfDataCollection to session storage
   useEffect(() => {
@@ -202,11 +198,6 @@ export function PatientCharacteristicsProvider({
   useEffect(() => {
     saveToStorage("brcaVariant", brcaVariant);
   }, [brcaVariant]);
-
-  // Persist viewStageClassification to session storage
-  useEffect(() => {
-    saveToStorage("viewStageClassification", viewStageClassification);
-  }, [viewStageClassification]);
 
   // Calculate TN combination
   const tnCombination = useMemo(() => {
@@ -344,7 +335,6 @@ export function PatientCharacteristicsProvider({
     setNodalInvolvement(null);
     setKi67Marker(null);
     setBrcaVariant(false);
-    setViewStageClassification(false);
     try {
       sessionStorage.removeItem(STORAGE_KEY);
     } catch (error) {
@@ -364,7 +354,6 @@ export function PatientCharacteristicsProvider({
     nodalInvolvement,
     ki67Marker,
     brcaVariant,
-    viewStageClassification,
     setTimingOfDataCollection,
     setHistology,
     setMenopausalStatus,
@@ -376,7 +365,6 @@ export function PatientCharacteristicsProvider({
     setNodalInvolvement,
     setKi67Marker,
     setBrcaVariant,
-    setViewStageClassification,
     stage,
     medicationEligibility,
     tnCombination,

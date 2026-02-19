@@ -40,8 +40,6 @@ export function PatientCharacteristicsInput() {
     setKi67Marker,
     brcaVariant,
     setBrcaVariant,
-    viewStageClassification,
-    setViewStageClassification,
     stage,
     medicationEligibility,
     tnCombination,
@@ -473,15 +471,13 @@ export function PatientCharacteristicsInput() {
             >
               Reset Inputs
             </Button>
-            <Toggle
+            <Button
               variant="outline"
-              aria-label="View stage classification"
               className="min-h-10 items-center justify-center rounded-none border border-gray-900 px-8 text-base font-semibold"
-              pressed={viewStageClassification}
-              onPressedChange={setViewStageClassification}
+              onClick={() => {}}
             >
               View stage classification
-            </Toggle>
+            </Button>
           </div>
         </div>
       </div>
