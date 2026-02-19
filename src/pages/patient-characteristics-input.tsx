@@ -54,7 +54,7 @@ export function PatientCharacteristicsInput() {
 
   return (
     <PageLayout title="Patient Characteristics Input Screen">
-      <div className="grid grid-cols-1 gap-4 text-center lg:grid-cols-2 lg:gap-8">
+      <div className="grid grid-cols-1 gap-4 text-center md:mr-16 lg:grid-cols-2 lg:gap-8">
         {/* Left Column */}
         <div className="space-y-4">
           {/* Timing of Data Collection */}
