@@ -23,7 +23,7 @@ const outcomes = [
 
 export function RiskAssessmentOutcome() {
   const { stage } = usePatientCharacteristics();
-  const outcome = outcomes[stage === "unknown" ? 1 : 0];
+  const outcome = outcomes[stage === "unknown" || !stage ? 1 : 0];
 
   return (
     <PageLayout title="Risk Assessment Outcome">
