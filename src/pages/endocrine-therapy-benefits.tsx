@@ -1,7 +1,13 @@
 import EndocrineTherapyBenefitsDesktop from "@/components/endocrine-therapy-benefits/endocrine-therapy-benefits-desktop";
 import { PageLayout } from "../components/page-layout";
-import { Link } from "react-router-dom";
 import EndocrineTherapyBenefitsMobile from "@/components/endocrine-therapy-benefits/endocrine-therapy-benefits-mobile";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { EndocrineTherapySideEffectsContent } from "@/components/endocrine-therapy-side-effects-content";
 
 export function EndocrineTherapyBenefits() {
   return (
@@ -15,15 +21,19 @@ export function EndocrineTherapyBenefits() {
           <EndocrineTherapyBenefitsDesktop />
           <EndocrineTherapyBenefitsMobile />
 
-          <div className="flex flex-col gap-4 pt-4 text-base font-semibold sm:text-lg md:flex-row md:items-center md:justify-end md:text-xl">
-            <span className="text-center md:text-left">Skip ahead to:</span>
-            <Link
-              to="/endocrine-therapy-effects"
-              className="inline-block w-full border border-black px-3 py-3 text-center text-base font-semibold transition-colors hover:bg-gray-100 sm:text-lg md:w-auto md:text-xl"
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button className="h-auto min-h-12 w-full rounded-none border border-black bg-white px-3 py-3 text-center text-base font-semibold whitespace-normal text-gray-900 hover:bg-gray-100 sm:text-lg md:w-auto md:text-xl">
+                Endocrine Therapy: Side Effects and Why Consistency Matters
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent
+              className="w-[90vw] max-w-2xl rounded-none border border-gray-900 p-6"
+              align="start"
             >
-              Endocrine Therapy: Side Effects and Why Consistency Matters
-            </Link>
-          </div>
+              <EndocrineTherapySideEffectsContent />
+            </PopoverContent>
+          </Popover>
         </main>
 
         <footer className="mt-auto pt-4 text-xs leading-5 whitespace-pre-line text-gray-700 md:text-sm">

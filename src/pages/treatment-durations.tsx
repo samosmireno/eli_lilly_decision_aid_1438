@@ -9,11 +9,6 @@ const references = [
   "6. KISQALI Product Monograph, Novartis Pharmaceuticals Canada Inc., June 2025.",
   "7. McGee S, et al. J Bone Oncol. 2021;27:100351.",
 ];
-const footnotes = [
-  "*Endocrine therapy is typically administered for at least 5 years and may be extended to up to 10 years based on recurrence risk and tolerability.",
-  "†CDK4/6 inhibitors are used in combination with endocrine therapy for a defined duration in selected patients.",
-  "‡Bone-modifying therapy may be considered for 2-3 years in appropriate patients. Treatment decisions should be individualized.",
-];
 
 export default function TreatmentDurations() {
   return (
@@ -23,24 +18,29 @@ export default function TreatmentDurations() {
           <img
             src="/placeholder-image.jpg"
             alt="Treatment duration visualization"
-            className="h-120 w-full border border-gray-900"
+            className="h-96 w-full border border-gray-900"
           />
+          <div className="mt-4 text-base md:mt-8 md:text-xl">
+            <ul className="list-disc pl-6">
+              <li>
+                <span className="font-semibold">Endocrine therapy:</span> is
+                usually given for at least 5 (and sometimes up to 10 years)
+              </li>
+              <li>
+                <span className="font-semibold">CDK4/6 inhibitors:</span> are
+                used along with endocrine therapy for a specific period of time,
+                if indicated
+              </li>
+              <li>
+                <span className="font-semibold">Bone-marrow therapy:</span>{" "}
+                Bone-marrow therapy may be used for 2-3 years to help protect
+                bones
+              </li>
+            </ul>
+            <p>Treatment plans should be personalized to each patient.</p>
+          </div>
         </main>
         <footer className="mt-auto pt-4 text-sm leading-5 text-gray-700">
-          <section aria-labelledby="footnotes-heading">
-            <h2 id="footnotes-heading" className="sr-only">
-              Footnotes
-            </h2>
-            <p>
-              {footnotes.map((note, index) => (
-                <span key={index}>
-                  {note}
-                  {index < footnotes.length - 1 ? " " : ""}
-                </span>
-              ))}
-            </p>
-          </section>
-
           <section aria-labelledby="references-heading">
             <h2 id="references-heading" className="sr-only">
               References
