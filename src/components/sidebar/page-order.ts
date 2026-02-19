@@ -1,3 +1,11 @@
+/**
+ * @deprecated This static page order is no longer used.
+ * The application now uses dynamic page ordering based on patient characteristics.
+ * See: src/hooks/use-dynamic-page-order.ts
+ *
+ * This file is kept for reference only.
+ */
+
 // Define your page navigation order here
 export const pageOrder = [
   "/patient-characteristics-input",

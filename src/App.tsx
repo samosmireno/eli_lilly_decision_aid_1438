@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
+import { PatientCharacteristicsProvider } from "./contexts/patient-characteristics-context";
+import { Home } from "./pages/home";
 import { PatientCharacteristicsInput } from "./pages/patient-characteristics-input";
 import { EndocrineTherapyPros } from "./pages/endocrine-therapy-pros";
 import { EndocrineTherapySideEffects } from "./pages/endocrine-therapy-side-effects";
@@ -48,110 +50,118 @@ function App() {
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
-      <Routes>
-        <Route path="/" element={<PatientCharacteristicsInput />} />
-        <Route
-          path="/patient-characteristics-input"
-          element={<PatientCharacteristicsInput />}
-        />
-        <Route
-          path="/endocrine-therapy-pros"
-          element={<EndocrineTherapyPros />}
-        />
-        <Route
-          path="/endocrine-therapy-effects"
-          element={<EndocrineTherapySideEffects />}
-        />
-        <Route path="/brca-mutation-status" element={<BrcaMutationStatus />} />
-        <Route
-          path="/endocrine-therapy-benefits"
-          element={<EndocrineTherapyBenefits />}
-        />
-        <Route
-          path="/baseline-risk-recurrence"
-          element={<BaselineRiskRecurrence />}
-        />
-        <Route
-          path="/risk-assessment-outcome"
-          element={<RiskAssessmentOutcome />}
-        />
-        <Route
-          path="/elevated-risk-recurrence"
-          element={<ElevatedRiskRecurrence />}
-        />
-        <Route
-          path="/role-cdk46-inhibitors"
-          element={<RoleCDK46Inhibitors />}
-        />
-        <Route
-          path="/characteristics-elevated-risk"
-          element={<CharacteristicsElevatedRisk />}
-        />
-        <Route path="/monarche-study" element={<Study studyKey="monarche" />} />
-        <Route path="/natalee-study" element={<Study studyKey="natalee" />} />
-        <Route path="/treatment-durations" element={<TreatmentDurations />} />
-        <Route
-          path="/cdk46-inhibitor-eligibility"
-          element={<CDK46InhibitorEligibility />}
-        />
-        <Route
-          path="/abemaciclib-eligibility"
-          element={<MedicationEligibility medicationKey="abemaciclib" />}
-        />
-        <Route
-          path="/ribociclib-eligibility"
-          element={<MedicationEligibility medicationKey="ribociclib" />}
-        />
-        <Route
-          path="/abemaciclib-precautions"
-          element={<MedicationPrecautions medicationKey="abemaciclib" />}
-        />
-        <Route
-          path="/ribociclib-precautions"
-          element={<MedicationPrecautions medicationKey="ribociclib" />}
-        />
-        <Route
-          path="/monarche-study-results"
-          element={<StudyResults medicationKey="abemaciclib" part={1} />}
-        />
-        <Route
-          path="/monarche-study-results/part-2"
-          element={<StudyResults medicationKey="abemaciclib" part={2} />}
-        />
-        <Route
-          path="/natalee-study-results"
-          element={<StudyResults medicationKey="ribociclib" part={1} />}
-        />
-        <Route
-          path="/natalee-study-results/part-2"
-          element={<StudyResults medicationKey="ribociclib" part={2} />}
-        />
-        <Route
-          path="/abemaciclib-side-effects"
-          element={<MedicationSideEffects medicationKey="abemaciclib" />}
-        />
-        <Route
-          path="/ribociclib-side-effects"
-          element={<MedicationSideEffects medicationKey="ribociclib" />}
-        />
-        <Route
-          path="/abemaciclib-quality-of-life"
-          element={<MedicationQualityOfLife medicationKey="abemaciclib" />}
-        />
-        <Route
-          path="/ribociclib-quality-of-life"
-          element={<MedicationQualityOfLife medicationKey="ribociclib" />}
-        />
-        <Route
-          path="/abemaciclib-care-journey"
-          element={<MedicationCareJourney medicationKey="abemaciclib" />}
-        />
-        <Route
-          path="/ribociclib-care-journey"
-          element={<MedicationCareJourney medicationKey="ribociclib" />}
-        />
-        <Route path="*" element={<PatientCharacteristicsInput />} />
-      </Routes>
+      <PatientCharacteristicsProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/patient-characteristics-input"
+            element={<PatientCharacteristicsInput />}
+          />
+          <Route
+            path="/endocrine-therapy-pros"
+            element={<EndocrineTherapyPros />}
+          />
+          <Route
+            path="/endocrine-therapy-effects"
+            element={<EndocrineTherapySideEffects />}
+          />
+          <Route
+            path="/brca-mutation-status"
+            element={<BrcaMutationStatus />}
+          />
+          <Route
+            path="/endocrine-therapy-benefits"
+            element={<EndocrineTherapyBenefits />}
+          />
+          <Route
+            path="/baseline-risk-recurrence"
+            element={<BaselineRiskRecurrence />}
+          />
+          <Route
+            path="/risk-assessment-outcome"
+            element={<RiskAssessmentOutcome />}
+          />
+          <Route
+            path="/elevated-risk-recurrence"
+            element={<ElevatedRiskRecurrence />}
+          />
+          <Route
+            path="/role-cdk46-inhibitors"
+            element={<RoleCDK46Inhibitors />}
+          />
+          <Route
+            path="/characteristics-elevated-risk"
+            element={<CharacteristicsElevatedRisk />}
+          />
+          <Route
+            path="/monarche-study"
+            element={<Study studyKey="monarche" />}
+          />
+          <Route path="/natalee-study" element={<Study studyKey="natalee" />} />
+          <Route path="/treatment-durations" element={<TreatmentDurations />} />
+          <Route
+            path="/cdk46-inhibitor-eligibility"
+            element={<CDK46InhibitorEligibility />}
+          />
+          <Route
+            path="/abemaciclib-eligibility"
+            element={<MedicationEligibility medicationKey="abemaciclib" />}
+          />
+          <Route
+            path="/ribociclib-eligibility"
+            element={<MedicationEligibility medicationKey="ribociclib" />}
+          />
+          <Route
+            path="/abemaciclib-precautions"
+            element={<MedicationPrecautions medicationKey="abemaciclib" />}
+          />
+          <Route
+            path="/ribociclib-precautions"
+            element={<MedicationPrecautions medicationKey="ribociclib" />}
+          />
+          <Route
+            path="/monarche-study-results"
+            element={<StudyResults medicationKey="abemaciclib" part={1} />}
+          />
+          <Route
+            path="/monarche-study-results/part-2"
+            element={<StudyResults medicationKey="abemaciclib" part={2} />}
+          />
+          <Route
+            path="/natalee-study-results"
+            element={<StudyResults medicationKey="ribociclib" part={1} />}
+          />
+          <Route
+            path="/natalee-study-results/part-2"
+            element={<StudyResults medicationKey="ribociclib" part={2} />}
+          />
+          <Route
+            path="/abemaciclib-side-effects"
+            element={<MedicationSideEffects medicationKey="abemaciclib" />}
+          />
+          <Route
+            path="/ribociclib-side-effects"
+            element={<MedicationSideEffects medicationKey="ribociclib" />}
+          />
+          <Route
+            path="/abemaciclib-quality-of-life"
+            element={<MedicationQualityOfLife medicationKey="abemaciclib" />}
+          />
+          <Route
+            path="/ribociclib-quality-of-life"
+            element={<MedicationQualityOfLife medicationKey="ribociclib" />}
+          />
+          <Route
+            path="/abemaciclib-care-journey"
+            element={<MedicationCareJourney medicationKey="abemaciclib" />}
+          />
+          <Route
+            path="/ribociclib-care-journey"
+            element={<MedicationCareJourney medicationKey="ribociclib" />}
+          />
+          <Route path="*" element={<PatientCharacteristicsInput />} />
+        </Routes>
+      </PatientCharacteristicsProvider>
     </>
   );
 }

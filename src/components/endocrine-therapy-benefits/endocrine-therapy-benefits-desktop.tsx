@@ -113,7 +113,7 @@ export default function EndocrineTherapyBenefitsDesktop() {
                 <div className="mt-1 text-base italic">
                   (typically combined
                   <br />
-                  with Tam or AI)
+                  with tamoxifen or AI)
                 </div>
               </div>
             </TableCell>

@@ -7,8 +7,8 @@ export function RoleCDK46Inhibitors() {
         <main>
           <ul className="mb-4 list-disc text-base sm:text-xl md:mb-8 md:text-2xl">
             <li className="ml-6">
-              Cancer cells grow by dividing controlled by proteins called CDK4
-              and CDK6
+              Cancer cells grow by dividing, which is controlled by proteins
+              called CDK4 and CDK6
               <sup>
                 <a href="#footnote1" id="footnote1-back">
                   <span className="sr-only">Footnote </span>*

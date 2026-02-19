@@ -24,7 +24,7 @@ export function BaselineRiskRecurrence() {
                 some patients have a higher chance of disease recurrence,
               </strong>{" "}
               even after excellent initial treatment and may benefit from adding
-              another medicine to further reduce that risk
+              another medicine to further reduce that risk.
             </li>
 
             <li className="ml-6">
@@ -42,7 +42,7 @@ export function BaselineRiskRecurrence() {
               +
             </Button>
             <p className="text-base font-semibold sm:text-lg md:text-xl">
-              Personalized Risk Discussion with your doctor
+              Personalized risk discussion with your doctor
             </p>
           </section>
         </main>

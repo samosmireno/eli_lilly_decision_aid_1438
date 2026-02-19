@@ -88,7 +88,7 @@ export default function EndocrineTherapyBenefitsMobile() {
             </sup>
           </div>
           <div className="text-sm italic">
-            (typically combined with Tam or AI)
+            (typically combined with tamoxifen or AI)
           </div>
         </div>
         <div className="mb-4">

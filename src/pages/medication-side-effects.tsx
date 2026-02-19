@@ -12,7 +12,7 @@ const medSideEffects = {
     sideEffects: [
       {
         category: "Infections:",
-        items: ["Serious infections occurred in about 5 our of 10 people"],
+        items: ["Serious infections occurred in about 5 out of 10 people"],
       },
       {
         category: "Blood-related changes:*",
@@ -45,7 +45,7 @@ const medSideEffects = {
     bottomMessage:
       "Most side effects were manageable, reversible, and improved with early reporting, helping many people stay on treatment.",
     footer: {
-      abbreviations: "ET, endocrine therapy",
+      abbreviations: "ER, emergency room; ET, endocrine therapy",
       footnote:
         "*Reported grade ≥3 infections were ~5% in the abemaciclib + ET arm vs 3% in ET alone. †Reported grade ≥3 hematologic and GI events were < 1% in the ET alone group. Eli Lilly Canada Inc. VERZENIO (abemaciclib) Product Monograph. Section 7 – Warnings and Precautions (diarrhea/early management; neutropenia & infection risk; hepatotoxicity; venous thromboembolism; interstitial lung disease/pneumonitis; embryo-fetal risk). Section 8 – Adverse Reactions (frequency and severity of common and serious AEs). Safety profile remained consistent with longer-term follow-up, with no new or delayed safety concerns reported; side effects were manageable with early intervention.",
       references: [

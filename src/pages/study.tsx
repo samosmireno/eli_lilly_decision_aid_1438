@@ -61,7 +61,7 @@ interface StudyProps {
 export function Study({ studyKey }: StudyProps) {
   const study = studies[studyKey];
   return (
-    <PageLayout title="Adding a CDK4/6 Inhibitor Further Reduced the Risk of Cancer Returning">
+    <PageLayout title="Adding a CDK4/6 Inhibitor Further Reduces the Risk of Cancer Returning">
       <div className="flex min-h-[calc(100vh-156px)] flex-col md:mr-16 lg:mt-8">
         <main className="space-y-4 md:space-y-8">
           <h2 className="text-center text-base sm:text-xl md:text-2xl lg:text-left">

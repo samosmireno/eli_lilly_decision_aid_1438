@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { PageLayout } from "../components/page-layout";
+import { usePatientCharacteristics } from "@/contexts/patient-characteristics-context";
 
 const outcomes = [
   {
@@ -11,7 +12,7 @@ const outcomes = [
       "Click here to learn how adding a CDK4/6 inhibitor to endocrine therapy may help reduce your risk.",
   },
   {
-    title: "Low elevated risk of recurrence",
+    title: "Low risk of recurrence",
     description:
       "Based on the information you entered, your patient's features suggests a low elevated chance of recurrence*",
     note: "*As defined by the monarchE and/or NATALEE clinical trials.",
@@ -21,7 +22,9 @@ const outcomes = [
 ];
 
 export function RiskAssessmentOutcome() {
-  const outcome = outcomes[0];
+  const { stage } = usePatientCharacteristics();
+  const outcome = outcomes[stage === "unknown" ? 1 : 0];
+
   return (
     <PageLayout title="Risk Assessment Outcome">
       <div className="flex items-center justify-center md:mr-16 md:pt-24">

@@ -1,8 +1,8 @@
 import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Link, useLocation } from "react-router-dom";
-import { pageOrder } from "./page-order";
 import { sidebarItems } from "./sidebar-items";
+import { useDynamicPageOrder } from "@/hooks/use-dynamic-page-order";
 
 interface SidebarProps {
   className?: string;
@@ -11,6 +11,7 @@ interface SidebarProps {
 export function Sidebar({ className = "" }: SidebarProps) {
   const location = useLocation();
   const currentPath = location.pathname;
+  const pageOrder = useDynamicPageOrder();
   const currentIndex = pageOrder.indexOf(currentPath);
 
   // Determine previous and next pages based on current location

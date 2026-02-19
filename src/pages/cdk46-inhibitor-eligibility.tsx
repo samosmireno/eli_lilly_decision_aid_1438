@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { PageLayout } from "../components/page-layout";
+import { usePatientCharacteristics } from "@/contexts/patient-characteristics-context";
 
 // Data array for different eligibility scenarios
 export const eligibilityScenarios = [
@@ -30,17 +31,24 @@ export const eligibilityScenarios = [
   },
 ];
 
-interface CDK46InhibitorEligibilityProps {
-  scenarioId?: number;
-}
+export default function CDK46InhibitorEligibility() {
+  const { medicationEligibility } = usePatientCharacteristics();
 
-export default function CDK46InhibitorEligibility({
-  scenarioId = 1,
-}: CDK46InhibitorEligibilityProps) {
-  // Get the selected scenario (default to first one)
-  const scenario =
-    eligibilityScenarios.find((s) => s.id === scenarioId) ||
-    eligibilityScenarios[0];
+  const scenario = eligibilityScenarios.find((s) => {
+    if (medicationEligibility === "abemaciclib") {
+      return s.eligibleFor === "abemaciclib";
+    } else if (medicationEligibility === "ribociclib") {
+      return s.eligibleFor === "ribociclib";
+    } else if (medicationEligibility === "both") {
+      return s.eligibleFor === "ribociclib or abemaciclib";
+    }
+    return false;
+  }) || {
+    characteristics:
+      "Based on your characteristics, you are not eligible for a CDK4/6 inhibitor.",
+    fullText:
+      "You are not eligible for a CDK4/6 inhibitor based on the current clinical trial criteria.",
+  };
 
   return (
     <PageLayout title="CDK4/6 inhibitor eligibility">
