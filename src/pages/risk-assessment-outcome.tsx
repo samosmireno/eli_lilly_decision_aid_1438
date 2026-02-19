@@ -6,7 +6,7 @@ const outcomes = [
   {
     title: "Intermediate/high elevated risk of recurrence",
     description:
-      "Based on the information you entered, your patient's features suggest an intermediate/ high elevated chance of recurrence*",
+      "Based on the information you entered, your patient's features suggest an intermediate/high elevated risk of recurrence*",
     note: "*As defined by the monarchE and/or NATALEE clinical trials.",
     action:
       "Click here to learn how adding a CDK4/6 inhibitor to endocrine therapy may help reduce your risk.",
@@ -14,7 +14,7 @@ const outcomes = [
   {
     title: "Low risk of recurrence",
     description:
-      "Based on the information you entered, your patient's features suggests a low elevated chance of recurrence*",
+      "Based on the information you entered, your patient's features suggests a low elevated risk of recurrence*",
     note: "*As defined by the monarchE and/or NATALEE clinical trials.",
     action:
       "Click here to learn why continuing endocrine therapy is recommended for you.",
