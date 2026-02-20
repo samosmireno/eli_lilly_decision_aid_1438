@@ -55,7 +55,7 @@ export function ElevatedRiskRecurrence() {
                 <a href="#ref1">
                   <span className="sr-only">Reference </span>1
                 </a>
-                –
+                ,
                 <a href="#ref2">
                   <span className="sr-only">Reference </span>2
                 </a>
@@ -70,7 +70,7 @@ export function ElevatedRiskRecurrence() {
                 <a href="#ref1">
                   <span className="sr-only">Reference </span>1
                 </a>
-                –
+                ,
                 <a href="#ref2">
                   <span className="sr-only">Reference </span>2
                 </a>

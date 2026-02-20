@@ -28,9 +28,12 @@ export function CharacteristicsElevatedRisk() {
 
             <ul className="list-disc text-base sm:text-xl md:text-2xl">
               <li className="ml-6">
-                Researchers from two major studies, monarchE (abemaciclib) and
-                NATALEE (ribociclib), identified which patients face this higher
-                risk and may benefit from extra treatment.
+                Researchers from two major studies,{" "}
+                <span className="font-semibold">monarchE</span> (abemaciclib)
+                and
+                <span className="font-semibold">NATALEE</span> (ribociclib),
+                identified which patients face this higher risk and may benefit
+                from extra treatment.
               </li>
             </ul>
           </section>

@@ -4,7 +4,7 @@ import { usePatientCharacteristics } from "@/contexts/patient-characteristics-co
 
 const outcomes = [
   {
-    title: "Intermediate/high elevated risk of recurrence",
+    title: "Intermediate/high risk of recurrence",
     description:
       "Based on the information you entered, your patient's features suggest an intermediate/high elevated risk of recurrence*",
     note: "*As defined by the monarchE and/or NATALEE clinical trials.",

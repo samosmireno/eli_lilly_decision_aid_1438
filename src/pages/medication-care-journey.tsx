@@ -19,16 +19,21 @@ const careJourneyData = {
         ],
       },
       {
-        title: "Take",
+        title: "Changes",
         icon: true,
         content: [
           {
-            text: "Dose reductions in stepwise manner to:",
+            bold: "Dose adjustments (if need be):",
+            text: "",
+            bullet: true,
+          },
+          {
+            text: "Based on side-effect severity, your doctor may pause or reduce your dose in a stepwise manner to:",
             bullet: false,
           },
           { text: "100 mg twice daily", bullet: true },
           { text: "50 mg twice daily", bullet: true },
-          { text: "stop", bullet: true },
+          { text: "Stop treatment", bullet: true },
         ],
       },
       {
@@ -94,7 +99,7 @@ const careJourneyData = {
             bullet: false,
           },
           {
-            text: "Hormone therapy continues to ≤5 years total.",
+            text: "Hormone therapy continues to ≥5 years total.",
             bullet: false,
           },
         ],

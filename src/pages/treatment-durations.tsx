@@ -12,7 +12,7 @@ const references = [
 
 export default function TreatmentDurations() {
   return (
-    <PageLayout title="Treatment Durations">
+    <PageLayout title="Understanding Treatment Durations">
       <div className="flex min-h-[calc(100vh-140px)] flex-col lg:mt-5">
         <main>
           <img

@@ -39,7 +39,7 @@ export function RoleCDK46Inhibitors() {
             <p id="footnote1" tabIndex={-1}>
               <a href="#footnote1-back">
                 <span className="sr-only">Back to footnote </span>*
-              </a>{" "}
+              </a>
               CDK4/6 inhibitors are targeted therapies that block
               cyclin-dependent kinases 4 and 6, key regulators of cell-cycle
               progression, thereby slowing or stopping cancer cell division.

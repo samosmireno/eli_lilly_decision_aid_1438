@@ -8,7 +8,7 @@ const studyResults = {
     followUp: "7",
     resultsPercentage: ["26.6%", "25.4%"],
     results: [
-      " more likely to stay cancer-free and live longer with abemaciclib + hormone therapy vs hormone therapy alone, with continued benefit 2 years after stopping abemaciclib",
+      " of people who took abemaciclib with hormone therapy were more likely to stay cancer-free and live longer than those who took hormone therapy alone, with continued benefit 2 years after stopping abemaciclib.",
       " reduced chance of cancer spreading when adding abemaciclib to hormone therapy, with continued benefit 2 years after stopping abemaciclib.",
     ],
     details: [
@@ -84,7 +84,8 @@ export function StudyResults({ medicationKey, part }: StudyResultsProps) {
                 cancer at higher risk of coming back.
               </li>
               <li>
-                <span className="font-semibold">Follow-up:</span> ~
+                <span className="font-semibold">Follow-up:</span>{" "}
+                {medicationKey === "abemaciclib" ? "~" : "About "}
                 {study.followUp} years after starting treatment.
               </li>
             </ul>
